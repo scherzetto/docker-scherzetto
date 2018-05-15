@@ -1,0 +1,14 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+clone	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^        $clone = clone $this;$/;"	v	language:PHP
+getHeader	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^    public function getHeader($header)$/;"	f	language:PHP
+getHeaderLine	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^    public function getHeaderLine($header)$/;"	f	language:PHP
+getHeaders	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^    public function getHeaders()$/;"	f	language:PHP
+getProtocolVersion	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^    public function getProtocolVersion()$/;"	f	language:PHP
+hasHeader	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^    public function hasHeader($header)$/;"	f	language:PHP
+header	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^        $header = $this->headerNames[$header];$/;"	v	language:PHP
+header	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^        $header = strtolower($header);$/;"	v	language:PHP
+headerNames	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^    private $headerNames = [];$/;"	v	language:PHP
+headers	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^    private $headers = [];$/;"	v	language:PHP
+protocol	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^    private $protocol = '1.1';$/;"	v	language:PHP
+stream	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^    private $stream;$/;"	v	language:PHP
+withProtocolVersion	/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Message/MessageTrait.php	/^    public function withProtocolVersion($version)$/;"	f	language:PHP
