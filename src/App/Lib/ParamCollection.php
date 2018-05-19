@@ -33,6 +33,6 @@ class ParamCollection
 
     public function set($key, $value)
     {
-        $this->$parameters[$key] = $value;
+        $this->parameters[$key] = $value;
     }
 }
