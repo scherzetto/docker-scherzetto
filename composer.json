@@ -4,12 +4,12 @@
     "type": "project",
     "require": {
         "twig/twig": "^2.4",
-        "psr/http-message": "^1.0",
-        "guzzlehttp/psr7": "^1.4"
+        "guzzlehttp/psr7": "^1.4",
+        "symfony/yaml": "^4.0"
     },
     "autoload": {
         "psr-4": {
-            "MyBlog\\": "./src/MyBlog/"
+            "App\\": "./src/App/"
         }
     },
     "license": "MIT",

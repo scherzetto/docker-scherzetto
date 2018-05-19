@@ -1,6 +1,6 @@
 <?php
 
-namespace MyBlog\App\Lib;
+namespace App\Lib;
 
 use Psr\Http\Message\RequestInterface;
 
