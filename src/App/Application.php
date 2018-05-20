@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Lib\Router;
+use App\Lib\Routing\Router;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 

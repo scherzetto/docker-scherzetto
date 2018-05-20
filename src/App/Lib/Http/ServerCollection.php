@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Lib;
+namespace App\Lib\Http;
+
+use App\Lib\Http\ParamCollection;
 
 class ServerCollection extends ParamCollection
 {

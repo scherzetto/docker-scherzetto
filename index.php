@@ -1,12 +1,14 @@
 <?php
 
 use App\Application;
-use App\Lib\Request;
+use App\Lib\Http\Request;
+use App\Lib\Http\ResponseSender;
 
 require __DIR__.'/vendor/autoload.php';
 
-$request = Request::createFromGlobals();
-$app = new Application();
+$app      = new Application();
+$request  = Request::createFromGlobals();
+$response = $app->handleRequest($request);
 
-$send = $app->handleRequest($request);
+$sender = new ResponseSender($response);
 $sender->sendResponse();
