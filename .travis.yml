@@ -2,5 +2,5 @@ language: php
 php:
   - '7.1'
   - '7.2'
-script: phpunit --bootstrap /home/travis/build/Tiriel/MyBlog/vendor/autoload.php /home/travis/build/Tiriel/MyBlog/tests/Tests
+# script: phpunit --bootstrap /home/travis/build/Tiriel/MyBlog/vendor/autoload.php /home/travis/build/Tiriel/MyBlog/tests/Tests
 
