@@ -19,7 +19,7 @@ class Application
     {
         list($controller, $action, $params) = $this->router->route($request);
 
-        $response = 'App\\Controller\\'.$controller::create()->$action($request);
+        $response = 'App\\Controller\\'.$controller::create()->$action($request, ...$params);
 
         return $response;
     }
