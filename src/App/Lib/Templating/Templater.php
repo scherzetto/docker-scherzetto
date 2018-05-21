@@ -15,11 +15,6 @@ class Templater
         $this->twigEnv    = new Twig_Environment($this->twigLoader);
     }
 
-    public static function getTemplater()
-    {
-        return new self();
-    }
-
     public function render(string $file, array $params = []): string
     {
         $template = $this->twigEnv->load($file)

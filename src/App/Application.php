@@ -17,7 +17,7 @@ class Application
 
     public function handleRequest(RequestInterface $request): ResponseInterface
     {
-        list($controller, $action) = $this->router->route($request);
+        list($controller, $action, $params) = $this->router->route($request);
 
         $response = 'App\\Controller\\'.$controller::create()->$action($request);
 

@@ -15,7 +15,7 @@ abstract class AbstractController
 
     public function __construct()
     {
-        $this->templater = Templater::getTemplater();
+        $this->templater = new Templater();
     }
 
     public static function create()
