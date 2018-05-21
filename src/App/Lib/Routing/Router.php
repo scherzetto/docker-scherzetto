@@ -10,10 +10,15 @@ class Router
      * @var UrlMatcher
      */
     private $matcher;
+    /**
+     * @var RouteLoader
+     */
+    private $loader;
 
     public function __construct()
     {
-        $collection = RouteLoader::loadRoutes();
+        $this->loader  = new RouteLoader()
+        $collection    = $this->loader->loadRoutes();
         $this->matcher = new UrlMatcher($collection);
     }
 

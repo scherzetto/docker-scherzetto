@@ -24,8 +24,9 @@ class UrlMatcher
 
     public function matchCollection($path)
     {
-        foreach ($this->collection->all() as $name => $route) {
+        foreach ($this->collection->all() as $route) {
             if (preg_match($route->getPathRegex(), $path, $matches)) {
+                // TODO use $matches for params
                 return [$route->getDefault('controller'), $route->getDefault('action'), $route->getParams()];
             }
         }
