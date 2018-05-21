@@ -12,7 +12,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "./src/App/"
+            "App\\": "./src/App/",
+            "Tests\\": "./tests/Tests/"
         }
     },
     "license": "MIT",
