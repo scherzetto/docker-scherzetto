@@ -28,6 +28,19 @@ class Request extends Request
         $this->cookie  = $cookie;
         $this->server  = $server;
         $this->files   = $files;
+
+        $method = $this->server->has('REQUEST_METHOD') ? $this->server->get('REQUEST_METHOD') : 'GET';
+
+        if ($this->server->has('REQUEST_URI')) {
+            $requestUri = $this->server->get('REQUEST_URI');
+        } elseif ($this->has('ORIG_PATH_INFO')) {
+            $requestUri = $this->server->get('ORIG_PATH_INFO');
+            $this->server->set('REQUEST_URI', $requestUri);
+        }
+
+        $version = substr($_SERVER['SERVER_PROTOCOL'], -3);
+
+        parent::__construct($method, $requestUri, $this->server->getHeaders(), $this->request, $version)
     }
 
     public static function createFromGlobals()
