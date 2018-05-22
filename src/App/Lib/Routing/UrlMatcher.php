@@ -25,10 +25,28 @@ class UrlMatcher
     public function matchCollection($path)
     {
         foreach ($this->collection->all() as $route) {
-            if (preg_match($route->getPathRegex(), $path, $matches)) {
-                // TODO use $matches for params
-                return [$route->getDefault('controller'), $route->getDefault('action'), $route->getParams()];
+            $regex = $this->createRegex($route);
+
+            if (preg_match($regex, $path, $matches)) {
+                array_slice($matches, 0, 1);
+                return [$route->getDefault('controller'), $route->getDefault('action'), $matches];
             }
         }
+    }
+
+    private function createRegex(RouteDefinition $route): string
+    {
+        $regex = $route->getPathRegex();
+        $reqs  = $route->getRequirements();
+        preg_replace_callback(
+            '/{(\w+)}/',
+            function ($m) use ($reqs) {
+                $req = $reqs[$m[1]] ?? '.+';
+                return "(?<{$m[1]}>{$req})";
+            },
+            $regex
+        );
+
+        return $regex;
     }
 }

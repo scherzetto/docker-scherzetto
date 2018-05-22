@@ -35,12 +35,13 @@ class RouteLoader
         $routesArr = $this->parser->parseFile($this->routeFile);
 
         foreach ($routesArr as $name => $row) {
-            $path     = $row['path'];
-            $params   = $row['params'] ?? [];
-            $defaults = $row['defaults'] ?? [];
-            $auth     = $row['auth'] ?? false;
+            $path         = $row['path'];
+            $requirements = $row['requirements'] ?? [];
+            $defaults     = $row['defaults'] ?? [];
+            $auth         = $row['auth'] ?? false;
+            $params       = $row['params'] ?? [];
 
-            $route = new RouteDefinition($name, $path, $params, $defaults, $auth);
+            $route = new RouteDefinition($name, $path, $requirements, $defaults, $auth, $params);
             $routes->add($name, $route);
         }
 
