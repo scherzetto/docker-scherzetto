@@ -42,7 +42,7 @@ class UrlMatcher
             '/{(\w+)}/',
             function ($matches) use ($reqs) {
                 $req = $reqs[$matches[1]] ?? '.+';
-                return "(?<{$m[1]}>{$req})";
+                return "(?<{$matches[1]}>{$req})";
             },
             $regex
         );
