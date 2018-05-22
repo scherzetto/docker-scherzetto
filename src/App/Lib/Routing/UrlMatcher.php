@@ -40,8 +40,8 @@ class UrlMatcher
         $reqs  = $route->getRequirements();
         preg_replace_callback(
             '/{(\w+)}/',
-            function ($m) use ($reqs) {
-                $req = $reqs[$m[1]] ?? '.+';
+            function ($matches) use ($reqs) {
+                $req = $reqs[$matches[1]] ?? '.+';
                 return "(?<{$m[1]}>{$req})";
             },
             $regex
