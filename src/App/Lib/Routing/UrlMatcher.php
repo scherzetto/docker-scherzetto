@@ -27,9 +27,15 @@ class UrlMatcher
         foreach ($this->collection->all() as $route) {
             $regex = $this->createRegex($route);
 
-            if (preg_match($regex, $path, $matches)) {
-                array_slice($matches, 0, 1);
-                return [$route->getDefault('controller'), $route->getDefault('action'), $matches];
+            if (preg_match('#^'.$regex.'$#', $path, $matches)) {
+                $params = array_filter($matches, function ($key) {
+                    return !is_int($key);
+                }, ARRAY_FILTER_USE_KEY);
+                return [
+                    'controller' => $route->getDefault('controller'),
+                    'action'     => $route->getDefault('action'),
+                    'params'     => $params
+                ];
             }
         }
     }
@@ -38,7 +44,7 @@ class UrlMatcher
     {
         $regex = $route->getPathRegex();
         $reqs  = $route->getRequirements();
-        preg_replace_callback(
+        $regex = preg_replace_callback(
             '/{(\w+)}/',
             function ($matches) use ($reqs) {
                 $req = $reqs[$matches[1]] ?? '.+';

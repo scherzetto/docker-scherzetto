@@ -5,7 +5,7 @@ home:
     action: 'index'
 
 blog:
-  path: /blog
+  path: '/blog'
   defaults:
     controller: 'Blog'
     action: 'index'

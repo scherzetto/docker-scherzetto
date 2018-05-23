@@ -40,9 +40,9 @@ class RouteDefinition
         $this->name         = $name;
         $this->pathRegex    = $pathRegex;
         $this->requirements = $requirements;
-        $this->defaults     = $defaults;
+        $this->defaults     = array_merge($this->defaults, $defaults);
         $this->auth         = $auth;
-        $this->params       = array_merge($this->params, $params);
+        $this->params       = $params;
     }
 
     public function getName(): string
