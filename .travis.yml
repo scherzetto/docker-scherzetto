@@ -2,5 +2,7 @@ language: php
 php:
   - '7.1'
   - '7.2'
-script: phpunit --bootstrap ./vendor/autoload.php ./tests/
+script:
+  - composer install
+  - phpunit ./tests/
 
