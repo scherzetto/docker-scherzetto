@@ -15,11 +15,11 @@ class Router
      */
     private $loader;
 
-    public function __construct()
+    public function __construct(RouteLoader $loader = null, UrlMatcher $matcher = null)
     {
-        $this->loader  = new RouteLoader();
+        $this->loader  = $loader ?? new RouteLoader();
         $collection    = $this->loader->loadRoutes();
-        $this->matcher = new UrlMatcher($collection);
+        $this->matcher = $matcher ?? new UrlMatcher($collection);
     }
 
     public function route(RequestInterface $request)
