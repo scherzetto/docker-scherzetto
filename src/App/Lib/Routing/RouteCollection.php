@@ -6,7 +6,7 @@ class RouteCollection
 {
     protected $routes = [];
 
-    public function add(string $name, Route $route)
+    public function add(string $name, RouteDefinition $route)
     {
         $this->routes[$name] = $route;
     }

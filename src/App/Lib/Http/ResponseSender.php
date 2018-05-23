@@ -8,7 +8,7 @@ class ResponseSender
 {
     protected $response;
 
-    public function __construct(ResponseInterface $Response)
+    public function __construct(ResponseInterface $response)
     {
         $this->response = $response;
     }
@@ -31,11 +31,11 @@ class ResponseSender
 
         foreach ($res->getHeaders() as $name => $values) {
             foreach ($values as $value) {
-                header($name.': '.$value, false, $res->getStatusCode())
+                header($name.': '.$value, false, $res->getStatusCode());
             }
         }
 
-        header(sprintf('HTTP/%s %s %s', $res->getProtocolVersion(), $res->getStatusCode(), $res->getReasonPhrase()))
+        header(sprintf('HTTP/%s %s %s', $res->getProtocolVersion(), $res->getStatusCode(), $res->getReasonPhrase()));
 
         return $this;
     }

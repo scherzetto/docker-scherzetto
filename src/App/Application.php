@@ -19,15 +19,15 @@ class Application
     {
         $keys = ['controller' => true, 'action' => true, 'params' => true];
 
-        extract(array_intersect_key($this->router->route($request), $keys));
-        $controller .= 'Controller';
-        $action     .= 'Action';
+        $attributes = $this->router->route($request);
+        $controller = $attributes['controller'].'Controller';
+        $action     = $attributes['action'].'Action';
 
         $namespace =  '\\App\\Controller\\';
         if (!class_exists($namespace.$controller)) {
             $namespace =  '\\App\\Lib\\Controller\\';
         }
-        $response = ($namespace.$controller)::create()->$action($request, ...$params);
+        $response = ($namespace.$controller)::create()->$action($request, ...$attributes['params']);
 
         return $response;
     }

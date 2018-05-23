@@ -29,7 +29,7 @@ class RouteLoader
         $this->parser    = new Parser();
     }
 
-    public static function loadRoutes()
+    public function loadRoutes()
     {
         $routes    = new RouteCollection();
         $routesArr = $this->parser->parseFile($this->routeFile);
