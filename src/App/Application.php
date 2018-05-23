@@ -10,17 +10,24 @@ class Application
 {
     protected $router;
 
-    public function __construct()
+    public function __construct(Router $router = null)
     {
-        $this->router = new Router();
+        $this->router = $router ?? new Router();
     }
 
     public function handleRequest(RequestInterface $request): ResponseInterface
     {
-        list($controller, $action, $params) = $this->router->route($request);
-        $action .= 'Action';
+        $keys = ['controller' => true, 'action' => true, 'params' => true];
 
-        $response = 'App\\Controller\\'.$controller::create()->$action($request, ...$params);
+        extract(array_intersect_key($this->router->route($request), $keys));
+        $controller .= 'Controller';
+        $action     .= 'Action';
+
+        $namespace =  '\\App\\Controller\\';
+        if (!class_exists($namespace.$controller)) {
+            $namespace =  '\\App\\Lib\\Controller\\';
+        }
+        $response = ($namespace.$controller)::create()->$action($request, ...$params);
 
         return $response;
     }

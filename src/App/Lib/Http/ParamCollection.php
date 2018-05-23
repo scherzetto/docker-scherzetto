@@ -23,12 +23,12 @@ class ParamCollection
 
     public function get($key, $default = null)
     {
-        return array_key_exists($this->parameters, $key) ? $this->parameters[$key] : $default;
+        return array_key_exists($key, $this->parameters) ? $this->parameters[$key] : $default;
     }
 
     public function has($key)
     {
-        return array_key_exists($this->parameters, $key);
+        return array_key_exists($key, $this->parameters);
     }
 
     public function set($key, $value)

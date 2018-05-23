@@ -17,7 +17,7 @@ class Router
 
     public function __construct()
     {
-        $this->loader  = new RouteLoader()
+        $this->loader  = new RouteLoader();
         $collection    = $this->loader->loadRoutes();
         $this->matcher = new UrlMatcher($collection);
     }
