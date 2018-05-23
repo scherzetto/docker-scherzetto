@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1527079347">
-  <project timestamp="1527079347">
+<coverage generated="1527089533">
+  <project timestamp="1527089533">
     <package name="App">
       <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Application.php">
         <class name="App\Application" namespace="App">
-          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="12" coveredelements="12"/>
         </class>
         <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
         <line num="15" type="stmt" count="2"/>
         <line num="16" type="stmt" count="2"/>
         <line num="18" type="method" name="handleRequest" visibility="public" complexity="2" crap="2" count="2"/>
         <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
         <line num="22" type="stmt" count="2"/>
-        <line num="23" type="stmt" count="2"/>
         <line num="24" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
         <line num="26" type="stmt" count="2"/>
-        <line num="27" type="stmt" count="2"/>
         <line num="28" type="stmt" count="2"/>
         <line num="30" type="stmt" count="2"/>
-        <line num="32" type="stmt" count="2"/>
-        <metrics loc="34" ncloc="34" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+        <metrics loc="32" ncloc="32" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="12" coveredelements="12"/>
       </file>
     </package>
     <package name="App\Lib\Controller">
@@ -48,17 +47,17 @@
         <class name="App\Lib\Http\ParamCollection" namespace="App\Lib\Http">
           <metrics complexity="7" methods="6" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="4" elements="14" coveredelements="7"/>
         </class>
-        <line num="9" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="11" type="stmt" count="2"/>
-        <line num="12" type="stmt" count="2"/>
-        <line num="14" type="method" name="all" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="16" type="stmt" count="2"/>
+        <line num="9" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="11" type="stmt" count="3"/>
+        <line num="12" type="stmt" count="3"/>
+        <line num="14" type="method" name="all" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="16" type="stmt" count="3"/>
         <line num="19" type="method" name="keys" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="21" type="stmt" count="0"/>
         <line num="24" type="method" name="get" visibility="public" complexity="2" crap="6.00" count="0"/>
         <line num="26" type="stmt" count="0"/>
-        <line num="29" type="method" name="has" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="31" type="stmt" count="2"/>
+        <line num="29" type="method" name="has" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="31" type="stmt" count="3"/>
         <line num="34" type="method" name="set" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="36" type="stmt" count="0"/>
         <line num="37" type="stmt" count="0"/>
@@ -68,22 +67,22 @@
         <class name="App\Lib\Http\Request" namespace="App\Lib\Http">
           <metrics complexity="5" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="12" elements="18" coveredelements="12"/>
         </class>
-        <line num="24" type="method" name="__construct" visibility="public" complexity="4" crap="4.13" count="2"/>
-        <line num="26" type="stmt" count="2"/>
-        <line num="27" type="stmt" count="2"/>
-        <line num="28" type="stmt" count="2"/>
-        <line num="29" type="stmt" count="2"/>
-        <line num="30" type="stmt" count="2"/>
-        <line num="32" type="stmt" count="2"/>
-        <line num="34" type="stmt" count="2"/>
-        <line num="35" type="stmt" count="2"/>
+        <line num="24" type="method" name="__construct" visibility="public" complexity="4" crap="4.13" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="34" type="stmt" count="3"/>
+        <line num="35" type="stmt" count="3"/>
         <line num="36" type="stmt" count="0"/>
-        <line num="37" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="3"/>
         <line num="38" type="stmt" count="0"/>
         <line num="39" type="stmt" count="0"/>
-        <line num="42" type="stmt" count="2"/>
-        <line num="44" type="stmt" count="2"/>
-        <line num="45" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="3"/>
+        <line num="44" type="stmt" count="3"/>
+        <line num="45" type="stmt" count="3"/>
         <line num="47" type="method" name="createFromGlobals" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="49" type="stmt" count="0"/>
         <metrics loc="51" ncloc="46" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="12" elements="18" coveredelements="12"/>
@@ -127,15 +126,15 @@
         <class name="App\Lib\Http\ServerCollection" namespace="App\Lib\Http">
           <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="4" elements="9" coveredelements="4"/>
         </class>
-        <line num="9" type="method" name="getHeaders" visibility="public" complexity="4" crap="6.00" count="2"/>
-        <line num="11" type="stmt" count="2"/>
-        <line num="12" type="stmt" count="2"/>
-        <line num="14" type="stmt" count="2"/>
+        <line num="9" type="method" name="getHeaders" visibility="public" complexity="4" crap="6.00" count="3"/>
+        <line num="11" type="stmt" count="3"/>
+        <line num="12" type="stmt" count="3"/>
+        <line num="14" type="stmt" count="3"/>
         <line num="15" type="stmt" count="0"/>
         <line num="16" type="stmt" count="0"/>
         <line num="17" type="stmt" count="0"/>
         <line num="18" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="3"/>
         <metrics loc="24" ncloc="24" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="4" elements="9" coveredelements="4"/>
       </file>
     </package>
@@ -213,17 +212,15 @@
       </file>
       <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Routing/RouteLoader.php">
         <class name="App\Lib\Routing\RouteLoader" namespace="App\Lib\Routing">
-          <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="0" elements="22" coveredelements="0"/>
+          <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="0" elements="18" coveredelements="0"/>
         </class>
         <line num="23" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="24" type="stmt" count="0"/>
         <line num="25" type="stmt" count="0"/>
         <line num="27" type="stmt" count="0"/>
         <line num="28" type="stmt" count="0"/>
         <line num="29" type="stmt" count="0"/>
         <line num="30" type="stmt" count="0"/>
         <line num="32" type="method" name="loadRoutes" visibility="public" complexity="2" crap="6.00" count="0"/>
-        <line num="33" type="stmt" count="0"/>
         <line num="34" type="stmt" count="0"/>
         <line num="35" type="stmt" count="0"/>
         <line num="37" type="stmt" count="0"/>
@@ -234,51 +231,41 @@
         <line num="42" type="stmt" count="0"/>
         <line num="44" type="stmt" count="0"/>
         <line num="45" type="stmt" count="0"/>
-        <line num="46" type="stmt" count="0"/>
         <line num="48" type="stmt" count="0"/>
-        <line num="49" type="stmt" count="0"/>
-        <metrics loc="50" ncloc="41" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="0" elements="22" coveredelements="0"/>
+        <metrics loc="50" ncloc="41" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="0" elements="18" coveredelements="0"/>
       </file>
       <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Routing/Router.php">
         <class name="App\Lib\Routing\Router" namespace="App\Lib\Routing">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
         </class>
-        <line num="18" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <line num="23" type="stmt" count="0"/>
-        <line num="25" type="method" name="route" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <metrics loc="29" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+        <line num="18" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="25" type="method" name="route" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <metrics loc="29" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
       </file>
       <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Routing/UrlMatcher.php">
         <class name="App\Lib\Routing\UrlMatcher" namespace="App\Lib\Routing">
-          <metrics complexity="7" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="0" elements="34" coveredelements="0"/>
+          <metrics complexity="7" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="0" elements="24" coveredelements="0"/>
         </class>
         <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="13" type="stmt" count="0"/>
         <line num="14" type="stmt" count="0"/>
         <line num="15" type="stmt" count="0"/>
         <line num="17" type="method" name="match" visibility="public" complexity="2" crap="6.00" count="0"/>
-        <line num="18" type="stmt" count="0"/>
         <line num="19" type="stmt" count="0"/>
         <line num="20" type="stmt" count="0"/>
-        <line num="21" type="stmt" count="0"/>
         <line num="22" type="stmt" count="0"/>
-        <line num="23" type="stmt" count="0"/>
         <line num="25" type="method" name="matchCollection" visibility="public" complexity="3" crap="12.00" count="0"/>
-        <line num="26" type="stmt" count="0"/>
         <line num="27" type="stmt" count="0"/>
         <line num="28" type="stmt" count="0"/>
         <line num="30" type="stmt" count="0"/>
         <line num="31" type="stmt" count="0"/>
         <line num="32" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
         <line num="35" type="stmt" count="0"/>
         <line num="37" type="method" name="createRegex" visibility="private" complexity="1" crap="2.00" count="0"/>
-        <line num="38" type="stmt" count="0"/>
         <line num="39" type="stmt" count="0"/>
         <line num="40" type="stmt" count="0"/>
         <line num="41" type="stmt" count="0"/>
@@ -287,10 +274,8 @@
         <line num="45" type="stmt" count="0"/>
         <line num="46" type="stmt" count="0"/>
         <line num="47" type="stmt" count="0"/>
-        <line num="48" type="stmt" count="0"/>
         <line num="50" type="stmt" count="0"/>
-        <line num="51" type="stmt" count="0"/>
-        <metrics loc="52" ncloc="49" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="0" elements="34" coveredelements="0"/>
+        <metrics loc="52" ncloc="49" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="0" elements="24" coveredelements="0"/>
       </file>
     </package>
     <package name="App\Lib\Templating">
@@ -308,6 +293,6 @@
         <metrics loc="24" ncloc="24" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="7" coveredelements="4"/>
       </file>
     </package>
-    <metrics files="12" loc="515" ncloc="466" classes="12" methods="43" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="182" coveredstatements="40" elements="225" coveredelements="50"/>
+    <metrics files="12" loc="513" ncloc="464" classes="12" methods="43" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="167" coveredstatements="44" elements="210" coveredelements="56"/>
   </project>
 </coverage>
