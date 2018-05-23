@@ -5,5 +5,5 @@ php:
 script:
   - composer install
   - phpunit --bootstrap ./vendor/autoload.php ./tests/ --coverage-clover ./docs/coverage/xml --whitelist ./src
-  - ./vendor/bin/codacycoverage clover build/coverage/xml
+  - ./vendor/bin/codacycoverage clover ./docs/coverage/xml
 
