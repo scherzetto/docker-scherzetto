@@ -1,0 +1,17 @@
+build:
+  environment:
+    php:
+      version: '7.1'
+  dependencies:
+    before:
+      - composer install
+  tests:
+    override:
+      -
+        command: phpunit --bootstrap ./vendor/autoload.php ./tests/ --coverage-clover ./docs/coverage/xml --whitelist ./src
+        coverage:
+          file: ./docs/coverage/xml
+          format: php-clover
+filter:
+  excluded_paths:
+    - vendor/*

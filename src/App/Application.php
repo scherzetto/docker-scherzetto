@@ -17,8 +17,6 @@ class Application
 
     public function handleRequest(RequestInterface $request): ResponseInterface
     {
-        $keys = ['controller' => true, 'action' => true, 'params' => true];
-
         $attributes = $this->router->route($request);
         $controller = $attributes['controller'].'Controller';
         $action     = $attributes['action'].'Action';
