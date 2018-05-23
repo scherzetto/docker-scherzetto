@@ -4,5 +4,5 @@ php:
   - '7.2'
 script:
   - composer install
-  - phpunit ./tests/
+  - phpunit --bootstrap ./vendor/autoload.php ./tests/
 
