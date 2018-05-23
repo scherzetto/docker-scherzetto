@@ -1,0 +1,20 @@
+home:
+  path: '/'
+  defaults:
+    controller: 'Main'
+    action: 'index'
+
+blog:
+  path: /blog
+  defaults:
+    controller: 'Blog'
+    action: 'index'
+
+blog_post:
+  path: '/blog/{slug}'
+  requirements:
+    slug: '[\w\d_-]+'
+  defaults:
+    controller: 'Blog'
+    action: 'getPost'
+

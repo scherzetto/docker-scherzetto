@@ -20,12 +20,13 @@ class RouteLoader
      */
     private $parser;
 
-    public function __construct()
+    public function __construct(string $path = null)
     {
+        $path = $path ?? '/config/routes.yml';
         list($scriptName) = get_included_files();
 
         $this->rootDir   = dirname(realpath($scriptName));
-        $this->routeFile = "{$this->rootDir}/config/routes.yml";
+        $this->routeFile = "{$this->rootDir}{$path}";
         $this->parser    = new Parser();
     }
 
