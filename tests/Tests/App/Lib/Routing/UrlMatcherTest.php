@@ -12,7 +12,7 @@ class UrlMatcherTest extends TestCase
 
     public function setUp()
     {
-        $loader        = new RouteLoader('/../../../tests/fixtures/routing.yml');
+        $loader        = new RouteLoader('tests/fixtures/routing.yml');
         $collection    = $loader->loadRoutes();
         $this->matcher = new UrlMatcher($collection);
     }

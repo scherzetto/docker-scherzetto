@@ -20,4 +20,9 @@ class RouteCollection
     {
         return $this->routes;
     }
+
+    public function count()
+    {
+        return count($this->routes);
+    }
 }
