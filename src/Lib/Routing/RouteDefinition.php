@@ -65,6 +65,11 @@ class RouteDefinition
         return $this->defaults;
     }
 
+    public function setDefaults(array $defaults = [])
+    {
+        $this->defaults = $defaults;
+    }
+
     public function getDefault($name)
     {
         return isset($this->defaults[$name]) ? $this->defaults[$name] : false;
