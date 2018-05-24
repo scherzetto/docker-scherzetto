@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Lib\Routing;
+namespace Lib\Routing;
 
 use GuzzleHttp\Psr7\UriResolver;
 use Symfony\Component\Yaml\Parser;
@@ -25,7 +25,7 @@ class RouteLoader
     {
         $path = $path ? ltrim($path, '/') : 'config/routes.yml';
 
-        $this->rootDir   = UriResolver::removeDotSegments(__DIR__.'/../../../../');
+        $this->rootDir   = UriResolver::removeDotSegments(__DIR__.'/../../../');
         $this->routeFile = "{$this->rootDir}{$path}";
         $this->parser    = new Parser();
     }

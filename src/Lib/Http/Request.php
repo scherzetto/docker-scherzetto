@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Lib\Http;
+namespace Lib\Http;
 
 use GuzzleHttp\Psr7\Request as BaseRequest;
 

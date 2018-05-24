@@ -1,6 +1,6 @@
 <?php
 
-use App\Application;
+use Lib\Application;
 use App\Lib\Http\Request;
 use App\Lib\Http\ResponseSender;
 

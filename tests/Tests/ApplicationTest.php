@@ -2,9 +2,9 @@
 
 namespace Tests;
 
-use App\Application;
-use App\Lib\Http\Request;
-use App\Lib\Routing\Router;
+use Lib\Application;
+use Lib\Http\Request;
+use Lib\Routing\Router;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 

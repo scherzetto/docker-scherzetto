@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Lib\Controller;
+namespace Lib\Controller;
 
-use App\Lib\Templating\Templater;
+use Lib\Templating\Templater;
 use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 

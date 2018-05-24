@@ -15,6 +15,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "./src/App/",
+            "Lib\\": "./src/Lib/",
             "Tests\\": "./tests/Tests/"
         }
     },

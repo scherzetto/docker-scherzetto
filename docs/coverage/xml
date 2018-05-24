@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1527158343">
-  <project timestamp="1527158343">
-    <package name="App">
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Application.php">
-        <class name="App\Application" namespace="App">
+<coverage generated="1527163823">
+  <project timestamp="1527163823">
+    <package name="Lib">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Application.php">
+        <class name="Lib\Application" namespace="Lib">
           <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="12" coveredelements="12"/>
         </class>
         <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
@@ -21,9 +21,9 @@
         <metrics loc="32" ncloc="32" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="12" coveredelements="12"/>
       </file>
     </package>
-    <package name="App\Lib\Controller">
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Controller/DefaultController.php">
-        <class name="App\Lib\Controller\DefaultController" namespace="App\Lib\Controller">
+    <package name="Lib\Controller">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Controller/DefaultController.php">
+        <class name="Lib\Controller\DefaultController" namespace="Lib\Controller">
           <metrics complexity="5" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="6" elements="13" coveredelements="10"/>
         </class>
         <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
@@ -42,9 +42,9 @@
         <metrics loc="47" ncloc="44" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="6" elements="13" coveredelements="10"/>
       </file>
     </package>
-    <package name="App\Lib\Http">
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Http/ParamCollection.php">
-        <class name="App\Lib\Http\ParamCollection" namespace="App\Lib\Http">
+    <package name="Lib\Http">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/ParamCollection.php">
+        <class name="Lib\Http\ParamCollection" namespace="Lib\Http">
           <metrics complexity="7" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="5" elements="14" coveredelements="9"/>
         </class>
         <line num="9" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
@@ -63,8 +63,8 @@
         <line num="37" type="stmt" count="0"/>
         <metrics loc="38" ncloc="38" classes="1" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="5" elements="14" coveredelements="9"/>
       </file>
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Http/Request.php">
-        <class name="App\Lib\Http\Request" namespace="App\Lib\Http">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Request.php">
+        <class name="Lib\Http\Request" namespace="Lib\Http">
           <metrics complexity="5" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="13" elements="18" coveredelements="13"/>
         </class>
         <line num="24" type="method" name="__construct" visibility="public" complexity="4" crap="4.04" count="4"/>
@@ -87,8 +87,8 @@
         <line num="49" type="stmt" count="0"/>
         <metrics loc="51" ncloc="46" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="13" elements="18" coveredelements="13"/>
       </file>
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Http/ResponseSender.php">
-        <class name="App\Lib\Http\ResponseSender" namespace="App\Lib\Http">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/ResponseSender.php">
+        <class name="Lib\Http\ResponseSender" namespace="Lib\Http">
           <metrics complexity="7" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="10" elements="19" coveredelements="13"/>
         </class>
         <line num="11" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
@@ -112,8 +112,8 @@
         <line num="47" type="stmt" count="1"/>
         <metrics loc="49" ncloc="49" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="10" elements="19" coveredelements="13"/>
       </file>
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Http/ServerCollection.php">
-        <class name="App\Lib\Http\ServerCollection" namespace="App\Lib\Http">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/ServerCollection.php">
+        <class name="Lib\Http\ServerCollection" namespace="Lib\Http">
           <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="7" elements="9" coveredelements="7"/>
         </class>
         <line num="9" type="method" name="getHeaders" visibility="public" complexity="4" crap="4.03" count="4"/>
@@ -128,9 +128,9 @@
         <metrics loc="24" ncloc="24" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="7" elements="9" coveredelements="7"/>
       </file>
     </package>
-    <package name="App\Lib\Routing">
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Routing/RouteCollection.php">
-        <class name="App\Lib\Routing\RouteCollection" namespace="App\Lib\Routing">
+    <package name="Lib\Routing">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Routing/RouteCollection.php">
+        <class name="Lib\Routing\RouteCollection" namespace="Lib\Routing">
           <metrics complexity="5" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="9" coveredelements="7"/>
         </class>
         <line num="9" type="method" name="add" visibility="public" complexity="1" crap="1" count="7"/>
@@ -144,8 +144,8 @@
         <line num="26" type="stmt" count="2"/>
         <metrics loc="28" ncloc="28" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="9" coveredelements="7"/>
       </file>
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Routing/RouteDefinition.php">
-        <class name="App\Lib\Routing\RouteDefinition" namespace="App\Lib\Routing">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Routing/RouteDefinition.php">
+        <class name="Lib\Routing\RouteDefinition" namespace="Lib\Routing">
           <metrics complexity="13" methods="10" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="10" elements="28" coveredelements="14"/>
         </class>
         <line num="38" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
@@ -178,8 +178,8 @@
         <line num="92" type="stmt" count="0"/>
         <metrics loc="94" ncloc="71" classes="1" methods="10" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="10" elements="28" coveredelements="14"/>
       </file>
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Routing/RouteLoader.php">
-        <class name="App\Lib\Routing\RouteLoader" namespace="App\Lib\Routing">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Routing/RouteLoader.php">
+        <class name="Lib\Routing\RouteLoader" namespace="Lib\Routing">
           <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="18" coveredelements="18"/>
         </class>
         <line num="24" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="7"/>
@@ -202,8 +202,8 @@
         <line num="49" type="stmt" count="7"/>
         <metrics loc="51" ncloc="42" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="18" coveredelements="18"/>
       </file>
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Routing/Router.php">
-        <class name="App\Lib\Routing\Router" namespace="App\Lib\Routing">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Routing/Router.php">
+        <class name="Lib\Routing\Router" namespace="Lib\Routing">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
         </class>
         <line num="18" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
@@ -215,8 +215,8 @@
         <line num="27" type="stmt" count="2"/>
         <metrics loc="29" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
       </file>
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Routing/UrlMatcher.php">
-        <class name="App\Lib\Routing\UrlMatcher" namespace="App\Lib\Routing">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Routing/UrlMatcher.php">
+        <class name="Lib\Routing\UrlMatcher" namespace="Lib\Routing">
           <metrics complexity="7" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="27" coveredelements="27"/>
         </class>
         <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
@@ -249,9 +249,9 @@
         <metrics loc="58" ncloc="55" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="27" coveredelements="27"/>
       </file>
     </package>
-    <package name="App\Lib\Templating">
-      <file name="/home/benjaminz/Dev/perso/MyBlog/src/App/Lib/Templating/Templater.php">
-        <class name="App\Lib\Templating\Templater" namespace="App\Lib\Templating">
+    <package name="Lib\Templating">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Templating/Templater.php">
+        <class name="Lib\Templating\Templater" namespace="Lib\Templating">
           <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="7" coveredelements="4"/>
         </class>
         <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>

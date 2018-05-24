@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\App\Lib\Routing;
+namespace Tests\Lib\Routing;
 
-use App\Lib\Routing\RouteCollection;
-use App\Lib\Routing\RouteLoader;
+use Lib\Routing\RouteCollection;
+use Lib\Routing\RouteLoader;
 use PHPUnit\Framework\TestCase;
 
 class RouteLoaderTest extends TestCase

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Lib\Http;
+namespace Lib\Http;
 
 use Psr\Http\Message\ResponseInterface;
 

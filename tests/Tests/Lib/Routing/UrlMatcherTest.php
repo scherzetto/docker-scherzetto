@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\App\Lib\Routing;
+namespace Tests\Lib\Routing;
 
-use App\Lib\Routing\RouteLoader;
-use App\Lib\Routing\UrlMatcher;
+use Lib\Routing\RouteLoader;
+use Lib\Routing\UrlMatcher;
 use PHPUnit\Framework\TestCase;
 
 class UrlMatcherTest extends TestCase

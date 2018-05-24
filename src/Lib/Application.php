@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace Lib;
 
-use App\Lib\Routing\Router;
+use Lib\Routing\Router;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -23,7 +23,7 @@ class Application
 
         $namespace =  '\\App\\Controller\\';
         if (!class_exists($namespace.$controller)) {
-            $namespace =  '\\App\\Lib\\Controller\\';
+            $namespace =  '\\Lib\\Controller\\';
         }
         $response = ($namespace.$controller)::create()->$action($request, ...$attributes['params']);
 

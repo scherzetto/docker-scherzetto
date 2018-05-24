@@ -1,11 +1,11 @@
 <?php
 
-namespace Tests\App\Lib\Routing;
+namespace Tests\Lib\Routing;
 
-use App\Lib\Http\Request;
-use App\Lib\Routing\RouteLoader;
-use App\Lib\Routing\Router;
-use App\Lib\Routing\UrlMatcher;
+use Lib\Http\Request;
+use Lib\Routing\RouteLoader;
+use Lib\Routing\Router;
+use Lib\Routing\UrlMatcher;
 use PHPUnit\Framework\TestCase;
 
 class RouterTest extends TestCase

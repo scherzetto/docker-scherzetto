@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Lib\Templating;
+namespace Lib\Templating;
 
 use Twig_Environment;
 
@@ -11,7 +11,7 @@ class Templater
 
     public function __construct()
     {
-        $this->twigLoader = new \Twig_Loader_Filesystem(__DIR__.'/../../../../public/templates');
+        $this->twigLoader = new \Twig_Loader_Filesystem(__DIR__.'/../../../public/templates');
         $this->twigEnv    = new \Twig_Environment($this->twigLoader);
     }
 

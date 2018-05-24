@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\App\Lib\Http;
+namespace Tests\Lib\Http;
 
-use App\Application;
-use App\Lib\Http\Request;
-use App\Lib\Http\ResponseSender;
+use Lib\Application;
+use Lib\Http\Request;
+use Lib\Http\ResponseSender;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 
