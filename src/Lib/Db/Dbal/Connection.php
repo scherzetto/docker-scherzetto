@@ -15,7 +15,7 @@ class Connection extends PDO
         $dsn      = $config['type'].';';
         $userpass = [];
 
-        foreach ($config as $key => val) {
+        foreach ($config as $key => $val) {
             if (!\in_array($key, $keys)) {
                 if (\in_array($key, ['username', 'password'])) {
                     $userpass[$key] = $val;
