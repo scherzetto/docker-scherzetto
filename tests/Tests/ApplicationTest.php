@@ -12,7 +12,7 @@ class ApplicationTest extends TestCase
 {
     protected $app;
 
-    /* @var PHPUnit_Framework_MockObject_MockObject */
+    /* @var \PHPUnit_Framework_MockObject_MockObject&Router */
     protected $router;
 
     public function setUp()
