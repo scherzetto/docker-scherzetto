@@ -39,28 +39,23 @@ class Accessor
         $refObject = new \ReflectionClass(get_class($target));
         $camelized = $this->camelize($property);
 
-        $getter    = self::PREF_GET.$camelized;
-        $setter    = self::PREF_SET.$camelized;
-        $hasser    = self::PREF_HAS.$camelized;
-        $isser     = self::PREF_IS.$camelized;
-        $getsetter = lcfirst($camelized);
         $magicGet  = '__'.self::PREF_GET;
         $magicSet  = '__'.self::PREF_SET;
         $magicCall = '__call';
 
         $methods = [
             self::MODE_READ  => [
-                $getter      => $getter,
-                $hasser      => $hasser,
-                $isser       => $isser,
-                $getsetter   => $getsetter,
-                $magicGet    => $getter,
-                $magicCall   => $getter
+                self::PREF_GET.$camelized => self::PREF_GET.$camelized,
+                self::PREF_HAS.$camelized => self::PREF_HAS.$camelized,
+                self::PREF_IS.$camelized  => self::PREF_IS.$camelized,
+                lcfirst($camelized)       => lcfirst($camelized),
+                $magicGet                 => self::PREF_GET.$camelized,
+                $magicCall                => self::PREF_GET.$camelized
             ],
             self::MODE_WRITE => [
-                $setter      => $setter,
-                $magicSet    => $setter,
-                $magicCall   => $setter
+                self::PREF_SET.$camelized => self::PREF_SET.$camelized,
+                $magicSet                 => self::PREF_SET.$camelized,
+                $magicCall                => self::PREF_SET.$camelized
             ]
         ];
 
