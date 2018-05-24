@@ -1,8 +1,8 @@
 <?php
 
 use Lib\Application;
-use App\Lib\Http\Request;
-use App\Lib\Http\ResponseSender;
+use Lib\Http\Request;
+use Lib\Http\ResponseSender;
 
 require __DIR__.'/vendor/autoload.php';
 
