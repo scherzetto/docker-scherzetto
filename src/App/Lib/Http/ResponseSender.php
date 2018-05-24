@@ -42,7 +42,7 @@ class ResponseSender
 
     public function sendContent()
     {
-        echo (string) $this->response->getStream();
+        echo (string) $this->response->getBody();
 
         return $this;
     }
