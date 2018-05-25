@@ -16,8 +16,8 @@ class Connection extends PDO
         $params = $this->createParams($config);
         parent::__construct(
             $params['dsn'],
-            $params['username'],
-            $params['password'],
+            $params['username'] ?? '',
+            $params['password'] ?? '',
             [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             ]

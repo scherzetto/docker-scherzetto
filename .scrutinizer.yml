@@ -5,6 +5,9 @@ build:
   dependencies:
     before:
       - composer install
+  project_setup:
+    before:
+      - mysql -e "CREATE DATABASE myblog;"
   tests:
     override:
       -
