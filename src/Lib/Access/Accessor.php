@@ -36,7 +36,6 @@ class Accessor
 
     private function getMethod($target, $property, $mode = self::MODE_READ)
     {
-        $refObject = new \ReflectionClass(get_class($target));
         $camelized = $this->camelize($property);
 
         $methods = [
@@ -44,19 +43,14 @@ class Accessor
                 self::PREF_GET.$camelized => self::PREF_GET.$camelized,
                 self::PREF_HAS.$camelized => self::PREF_HAS.$camelized,
                 self::PREF_IS.$camelized  => self::PREF_IS.$camelized,
-                lcfirst($camelized)       => lcfirst($camelized),
-                '__'.self::PREF_GET       => self::PREF_GET.$camelized,
-                '__call'                  => self::PREF_GET.$camelized
             ],
             self::MODE_WRITE => [
                 self::PREF_SET.$camelized => self::PREF_SET.$camelized,
-                '__'.self::PREF_SET       => self::PREF_SET.$camelized,
-                '__call'                  => self::PREF_SET.$camelized
             ]
         ];
 
         foreach ($methods[$mode] as $name => $method) {
-            if ($refObject->hasMethod($name)) {
+            if (method_exists($target, $method)) {
                 return $method;
             }
         }
