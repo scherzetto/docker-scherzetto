@@ -13,12 +13,12 @@ class Connection extends PDO
     {
         $parser = new Parser();
         $config = $parser->parseFile(__DIR__.'/../../../../config/config.yml')['database'];
-        $params = $this->createDsn($config);
+        $params = $this->createParams($config);
         parent::__construct($params['dsn'], $params['username'], $params['password'], []);
     }
 
 
-    public function createDsn($config)
+    public function createParams($config)
     {
         $params = [
             'dsn' => $config['type'].';'
@@ -32,11 +32,18 @@ class Connection extends PDO
                 unset($config[$key]);
             }
         }
+        $params['dsn'] .= $this->createDsn($config);
+        return $params;
+    }
+
+    public function createDsn($config)
+    {
+        $dsn = '';
         foreach (self::KEYS as $key) {
             if (isset($config[$key])) {
-                $params['dsn'] .= "{$key}={$config[$key]};";
+                $dsn .= "{$key}={$config[$key]};";
             }
         }
-        return $params;
+        return $dsn;
     }
 }

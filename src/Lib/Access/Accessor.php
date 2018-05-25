@@ -19,9 +19,8 @@ class Accessor
         } elseif (\is_object($arrayOrObject)) {
             $method = $this->getMethod($arrayOrObject, $property);
             return $method ? $arrayOrObject->$method() : false;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public function writeValue(&$arrayOrObject, $property, $value)
@@ -40,16 +39,16 @@ class Accessor
 
         $methods = [
             self::MODE_READ  => [
-                self::PREF_GET.$camelized => self::PREF_GET.$camelized,
-                self::PREF_HAS.$camelized => self::PREF_HAS.$camelized,
-                self::PREF_IS.$camelized  => self::PREF_IS.$camelized,
+                self::PREF_GET.$camelized,
+                self::PREF_HAS.$camelized,
+                self::PREF_IS.$camelized,
             ],
             self::MODE_WRITE => [
-                self::PREF_SET.$camelized => self::PREF_SET.$camelized,
+                self::PREF_SET.$camelized,
             ]
         ];
 
-        foreach ($methods[$mode] as $name => $method) {
+        foreach ($methods[$mode] as $method) {
             if (method_exists($target, $method)) {
                 return $method;
             }

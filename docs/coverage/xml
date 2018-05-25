@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1527240455">
-  <project timestamp="1527240455">
+<coverage generated="1527241178">
+  <project timestamp="1527241178">
     <package name="Lib\Access">
       <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Access/Accessor.php">
         <class name="Lib\Access\Accessor" namespace="Lib\Access">
@@ -13,28 +13,28 @@
         <line num="20" type="stmt" count="2"/>
         <line num="21" type="stmt" count="2"/>
         <line num="23" type="stmt" count="0"/>
-        <line num="27" type="method" name="writeValue" visibility="public" complexity="4" crap="4.07" count="2"/>
-        <line num="29" type="stmt" count="2"/>
-        <line num="30" type="stmt" count="0"/>
+        <line num="26" type="method" name="writeValue" visibility="public" complexity="4" crap="4.07" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="2"/>
         <line num="31" type="stmt" count="2"/>
         <line num="32" type="stmt" count="2"/>
-        <line num="33" type="stmt" count="2"/>
-        <line num="35" type="stmt" count="2"/>
-        <line num="37" type="method" name="getMethod" visibility="private" complexity="3" crap="3" count="4"/>
-        <line num="39" type="stmt" count="4"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="36" type="method" name="getMethod" visibility="private" complexity="3" crap="3" count="4"/>
+        <line num="38" type="stmt" count="4"/>
+        <line num="41" type="stmt" count="4"/>
         <line num="42" type="stmt" count="4"/>
         <line num="43" type="stmt" count="4"/>
         <line num="44" type="stmt" count="4"/>
-        <line num="45" type="stmt" count="4"/>
+        <line num="46" type="stmt" count="4"/>
         <line num="47" type="stmt" count="4"/>
-        <line num="48" type="stmt" count="4"/>
+        <line num="51" type="stmt" count="4"/>
         <line num="52" type="stmt" count="4"/>
         <line num="53" type="stmt" count="4"/>
-        <line num="54" type="stmt" count="4"/>
-        <line num="57" type="stmt" count="2"/>
-        <line num="60" type="method" name="camelize" visibility="public" complexity="1" crap="1" count="4"/>
-        <line num="62" type="stmt" count="4"/>
-        <metrics loc="64" ncloc="64" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="21" elements="28" coveredelements="23"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="59" type="method" name="camelize" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="61" type="stmt" count="4"/>
+        <metrics loc="63" ncloc="63" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="21" elements="28" coveredelements="23"/>
       </file>
     </package>
     <package name="Lib">
@@ -81,7 +81,7 @@
     <package name="Lib\Db\Dbal">
       <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Db/Dbal/Connection.php">
         <class name="Lib\Db\Dbal\Connection" namespace="Lib\Db\Dbal">
-          <metrics complexity="7" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="0" elements="27" coveredelements="0"/>
+          <metrics complexity="8" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="0" elements="32" coveredelements="0"/>
         </class>
         <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="13" type="stmt" count="0"/>
@@ -90,7 +90,7 @@
         <line num="16" type="stmt" count="0"/>
         <line num="17" type="stmt" count="0"/>
         <line num="18" type="stmt" count="0"/>
-        <line num="21" type="method" name="createDsn" visibility="public" complexity="6" crap="42.00" count="0"/>
+        <line num="21" type="method" name="createParams" visibility="public" complexity="4" crap="20.00" count="0"/>
         <line num="22" type="stmt" count="0"/>
         <line num="23" type="stmt" count="0"/>
         <line num="24" type="stmt" count="0"/>
@@ -106,11 +106,16 @@
         <line num="35" type="stmt" count="0"/>
         <line num="36" type="stmt" count="0"/>
         <line num="37" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <line num="39" type="stmt" count="0"/>
+        <line num="39" type="method" name="createDsn" visibility="public" complexity="3" crap="12.00" count="0"/>
         <line num="40" type="stmt" count="0"/>
         <line num="41" type="stmt" count="0"/>
-        <metrics loc="42" ncloc="42" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="0" elements="27" coveredelements="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <metrics loc="48" ncloc="48" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="0" elements="32" coveredelements="0"/>
       </file>
     </package>
     <package name="Lib\Db\Orm">
@@ -350,6 +355,6 @@
         <metrics loc="24" ncloc="24" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="7" coveredelements="4"/>
       </file>
     </package>
-    <metrics files="15" loc="654" ncloc="602" classes="15" methods="52" coveredmethods="35" conditionals="0" coveredconditionals="0" statements="191" coveredstatements="138" elements="243" coveredelements="173"/>
+    <metrics files="15" loc="659" ncloc="607" classes="15" methods="53" coveredmethods="35" conditionals="0" coveredconditionals="0" statements="195" coveredstatements="138" elements="248" coveredelements="173"/>
   </project>
 </coverage>
