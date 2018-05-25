@@ -14,14 +14,21 @@ class Connection extends PDO
         $parser = new Parser();
         $config = $parser->parseFile(__DIR__.'/../../../../config/config.yml')['database'];
         $params = $this->createParams($config);
-        parent::__construct($params['dsn'], $params['username'], $params['password'], []);
+        parent::__construct(
+            $params['dsn'],
+            $params['username'],
+            $params['password'],
+            [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+            ]
+        );
     }
 
 
-    public function createParams($config)
+    private function createParams($config)
     {
         $params = [
-            'dsn' => $config['type'].';'
+            'dsn' => ($config['type'] ?? 'mysql').':'
         ];
 
         foreach ($config as $key => $val) {
@@ -36,7 +43,7 @@ class Connection extends PDO
         return $params;
     }
 
-    public function createDsn($config)
+    private function createDsn($config)
     {
         $dsn = '';
         foreach (self::KEYS as $key) {

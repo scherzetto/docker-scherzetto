@@ -6,12 +6,14 @@ use Lib\Http\Request;
 use Lib\Routing\RouteLoader;
 use Lib\Routing\Router;
 use Lib\Routing\UrlMatcher;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class RouterTest extends TestCase
 {
     public function testMatcherIsCalled()
     {
+        /* @var UrlMatcher&PHPunit\Framework\MockObject\MockObject */
         $matcher = $this
             ->getMockBuilder(UrlMatcher::class)
             ->disableOriginalConstructor()
@@ -19,6 +21,7 @@ class RouterTest extends TestCase
             ->disallowMockingUnknownTypes()
             ->setMethods(['match'])
             ->getMock();
+        /* @var RouteLoader&PHPUnit\Framework\MockObject\MockObject */
         $loader = $this
             ->getMockBuilder(RouteLoader::class)
             ->disableOriginalConstructor()
