@@ -14,10 +14,11 @@ class Connection extends PDO
         $parser = new Parser();
         $config = $parser->parseFile(__DIR__.'/../../../../config/config.yml')['database'];
         $params = $this->createParams($config);
+        $password = getenv("TEST") ? '' : ($params['password'] ?? '');
         parent::__construct(
             $params['dsn'],
             $params['username'] ?? '',
-            $params['password'] ?? '',
+            $password,
             [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             ]
