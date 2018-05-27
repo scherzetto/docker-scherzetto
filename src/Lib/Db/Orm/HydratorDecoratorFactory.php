@@ -24,11 +24,7 @@ class HydratorDecoratorFactory
             $this->createHydratorForClass($classOrObject, $args);
         }
 
-        if (false !== strpos($classOrObject, '\\')) {
-            $classOrObject = $this->getShortClassName($classOrObject);
-        }
-
-        return $this->decorators[$classOrObject];
+        return $this->decorators[$this->getShortClassName($classOrObject)];
     }
 
     public function createHydratorForClass($class, array $args = [])

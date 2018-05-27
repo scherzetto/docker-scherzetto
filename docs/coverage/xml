@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1527417690">
-  <project timestamp="1527417690">
+<coverage generated="1527419764">
+  <project timestamp="1527419764">
     <package name="Lib\Access">
       <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Access/Accessor.php">
         <class name="Lib\Access\Accessor" namespace="Lib\Access">
@@ -115,39 +115,37 @@
     <package name="Lib\Db\Orm">
       <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Db/Orm/HydratorDecoratorFactory.php">
         <class name="Lib\Db\Orm\HydratorDecoratorFactory" namespace="Lib\Db\Orm">
-          <metrics complexity="11" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="24" elements="30" coveredelements="26"/>
+          <metrics complexity="10" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="22" elements="28" coveredelements="24"/>
         </class>
         <line num="11" type="method" name="getShortClassName" visibility="public" complexity="1" crap="1" count="2"/>
         <line num="13" type="stmt" count="2"/>
         <line num="14" type="stmt" count="2"/>
-        <line num="17" type="method" name="getHydratorForClass" visibility="public" complexity="5" crap="5.07" count="1"/>
+        <line num="17" type="method" name="getHydratorForClass" visibility="public" complexity="4" crap="4.13" count="1"/>
         <line num="19" type="stmt" count="1"/>
         <line num="20" type="stmt" count="0"/>
         <line num="23" type="stmt" count="1"/>
         <line num="24" type="stmt" count="1"/>
         <line num="27" type="stmt" count="1"/>
-        <line num="28" type="stmt" count="1"/>
-        <line num="31" type="stmt" count="1"/>
-        <line num="34" type="method" name="createHydratorForClass" visibility="public" complexity="3" crap="3" count="2"/>
-        <line num="36" type="stmt" count="2"/>
+        <line num="30" type="method" name="createHydratorForClass" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
         <line num="37" type="stmt" count="2"/>
         <line num="38" type="stmt" count="2"/>
-        <line num="39" type="stmt" count="2"/>
         <line num="41" type="stmt" count="2"/>
         <line num="42" type="stmt" count="2"/>
-        <line num="45" type="stmt" count="2"/>
-        <line num="46" type="stmt" count="2"/>
-        <line num="47" type="stmt" count="2"/>
-        <line num="49" type="method" name="createHydratorFile" visibility="public" complexity="2" crap="2.01" count="3"/>
-        <line num="51" type="stmt" count="3"/>
-        <line num="52" type="stmt" count="3"/>
-        <line num="53" type="stmt" count="0"/>
-        <line num="61" type="stmt" count="3"/>
-        <line num="64" type="stmt" count="3"/>
-        <line num="102" type="stmt" count="3"/>
-        <line num="103" type="stmt" count="3"/>
-        <line num="105" type="stmt" count="3"/>
-        <metrics loc="107" ncloc="107" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="24" elements="30" coveredelements="26"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="45" type="method" name="createHydratorFile" visibility="public" complexity="2" crap="2.01" count="3"/>
+        <line num="47" type="stmt" count="3"/>
+        <line num="48" type="stmt" count="3"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="57" type="stmt" count="3"/>
+        <line num="60" type="stmt" count="3"/>
+        <line num="98" type="stmt" count="3"/>
+        <line num="99" type="stmt" count="3"/>
+        <line num="101" type="stmt" count="3"/>
+        <metrics loc="103" ncloc="103" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="22" elements="28" coveredelements="24"/>
       </file>
       <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Db/Orm/Manager.php">
         <class name="Lib\Db\Orm\Manager" namespace="Lib\Db\Orm">
@@ -385,6 +383,6 @@
         <metrics loc="24" ncloc="24" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="7" coveredelements="4"/>
       </file>
     </package>
-    <metrics files="16" loc="775" ncloc="723" classes="16" methods="57" coveredmethods="40" conditionals="0" coveredconditionals="0" statements="215" coveredstatements="185" elements="272" coveredelements="225"/>
+    <metrics files="16" loc="771" ncloc="719" classes="16" methods="57" coveredmethods="40" conditionals="0" coveredconditionals="0" statements="213" coveredstatements="183" elements="270" coveredelements="223"/>
   </project>
 </coverage>
