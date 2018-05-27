@@ -30,7 +30,7 @@ class HydratorDecoratorFactory
     public function createHydratorForClass($class, array $args = [])
     {
         $shortClass    = $this->getShortClassName($class);
-        $hydratorClass = $shortClass.'HydratorDecorator'.uniqid();
+        $hydratorClass = $shortClass.'HydratorDecorator';
         $dir           = UriResolver::removeDotSegments(__DIR__.'/../../../../var/cache/orm/hydrators/');
         $hydratorFile  = $dir.$hydratorClass.'.php';
 
@@ -38,7 +38,10 @@ class HydratorDecoratorFactory
             $this->createHydratorFile($class, $hydratorClass, $hydratorFile);
         }
 
-        include($hydratorFile);
+        if (!class_exists($hydratorClass)) {
+            include($hydratorFile);
+        }
+
         $this->decorators[$shortClass] = new $hydratorClass(...$args);
     }
 

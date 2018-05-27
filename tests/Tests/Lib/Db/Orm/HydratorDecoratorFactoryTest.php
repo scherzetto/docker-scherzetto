@@ -26,7 +26,6 @@ class HydratorDecoratorFactoryTest extends TestCase
 
         $this->assertTrue(file_exists($file));
         $this->assertInstanceOf(RouteDefinition::class, $hydrator);
-        unlink($file);
     }
 
     public function testCreateHydratorForClassCreatesHydrator()
@@ -42,6 +41,13 @@ class HydratorDecoratorFactoryTest extends TestCase
     public function testGetHydratorForClassReturnsPreviouslyInstanciatedHydrator()
     {
         $hydrator = $this->factory->getHydratorForClass(RouteDefinition::class, ['home', '/']);
+
+        $this->assertInstanceOf(RouteDefinition::class, $hydrator);
+    }
+
+    public function testGetHydratorForClassWithObjectAsArg()
+    {
+        $hydrator = $this->factory->getHydratorForClass(new RouteDefinition('home', '/'), ['home', '/']);
 
         $this->assertInstanceOf(RouteDefinition::class, $hydrator);
     }
