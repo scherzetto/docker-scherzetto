@@ -28,4 +28,21 @@ class HydratorDecoratorFactoryTest extends TestCase
         $this->assertInstanceOf(RouteDefinition::class, $hydrator);
         unlink($file);
     }
+
+    public function testCreateHydratorForClassCreatesHydrator()
+    {
+        $hydratorClass = 'RouteDefinitionHydratorDecorator';
+
+        $this->factory->createHydratorForClass(RouteDefinition::class, ['home', '/']);
+        $hydrator = new $hydratorClass('home', '/');
+
+        $this->assertInstanceOf(RouteDefinition::class, $hydrator);
+    }
+
+    public function testGetHydratorForClassReturnsPreviouslyInstanciatedHydrator()
+    {
+        $hydrator = $this->factory->getHydratorForClass(RouteDefinition::class, ['home', '/']);
+
+        $this->assertInstanceOf(RouteDefinition::class, $hydrator);
+    }
 }

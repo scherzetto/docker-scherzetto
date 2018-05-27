@@ -8,32 +8,42 @@ class HydratorDecoratorFactory
 {
     protected $decorators = [];
 
-    public function getHydratorForClass($classOrObject)
+    public function getShortClassName($fqcn)
+    {
+        $classArray = explode('\\', $fqcn);
+        return array_pop($classArray);
+    }
+
+    public function getHydratorForClass($classOrObject, array $args = [])
     {
         if (!is_string($classOrObject) && is_object($classOrObject)) {
             $classOrObject = get_class($classOrObject);
         }
 
         if (!isset($this->decorators[$classOrObject])) {
-            $this->createHydratorForClass($classOrObject);
+            $this->createHydratorForClass($classOrObject, $args);
+        }
+
+        if (false !== strpos($classOrObject, '\\')) {
+            $classOrObject = $this->getShortClassName($classOrObject);
         }
 
         return $this->decorators[$classOrObject];
     }
 
-    public function createHydratorForClass($class)
+    public function createHydratorForClass($class, array $args = [])
     {
-        $shortClass    = array_pop(explode('\\', $class));
-        $hydratorClass = $class.'HydratorDecorator';
-        $dir           = UriResolver::removeDotSegments(__DIR__.'../../../../var/cache/orm/hydrators/');
+        $shortClass    = $this->getShortClassName($class);
+        $hydratorClass = $shortClass.'HydratorDecorator'.uniqid();
+        $dir           = UriResolver::removeDotSegments(__DIR__.'/../../../../var/cache/orm/hydrators/');
         $hydratorFile  = $dir.$hydratorClass.'.php';
 
         if (!file_exists($hydratorFile) || !is_readable($hydratorFile)) {
-            $this->createHydratorFile($shortClass, $hydratorClass, $hydratorFile);
+            $this->createHydratorFile($class, $hydratorClass, $hydratorFile);
         }
 
-        include_once($hydratorFile);
-        $this->decorators[$class] = new $hydratorClass();
+        include($hydratorFile);
+        $this->decorators[$shortClass] = new $hydratorClass(...$args);
     }
 
     public function createHydratorFile($entityClass, $hydratorClass, $hydratorFile)
