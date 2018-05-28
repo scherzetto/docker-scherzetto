@@ -7,12 +7,15 @@ use Lib\Http\Request;
 use Lib\Routing\Router;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\MockObject\MockObject;
 
 class ApplicationTest extends TestCase
 {
     protected $app;
 
-    /* @var \PHPUnit_Framework_MockObject_MockObject&Router */
+    /**
+     * @var Router&MockObject
+     */
     protected $router;
 
     public function setUp()

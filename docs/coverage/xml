@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1527431047">
-  <project timestamp="1527431047">
+<coverage generated="1527500058">
+  <project timestamp="1527500058">
     <package name="Lib\Access">
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Access/Accessor.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Access/Accessor.php">
         <class name="Lib\Access\Accessor" namespace="Lib\Access">
           <metrics complexity="12" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="21" elements="28" coveredelements="23"/>
         </class>
@@ -38,7 +38,7 @@
       </file>
     </package>
     <package name="Lib">
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Application.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Application.php">
         <class name="Lib\Application" namespace="Lib">
           <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="12" coveredelements="12"/>
         </class>
@@ -58,7 +58,7 @@
       </file>
     </package>
     <package name="Lib\Controller">
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Controller/DefaultController.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Controller/DefaultController.php">
         <class name="Lib\Controller\DefaultController" namespace="Lib\Controller">
           <metrics complexity="5" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="6" elements="13" coveredelements="10"/>
         </class>
@@ -79,7 +79,7 @@
       </file>
     </package>
     <package name="Lib\Db\Dbal">
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Db/Dbal/Connection.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Db/Dbal/Connection.php">
         <class name="Lib\Db\Dbal\Connection" namespace="Lib\Db\Dbal">
           <metrics complexity="9" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="26" coveredelements="26"/>
         </class>
@@ -113,9 +113,9 @@
       </file>
     </package>
     <package name="Lib\Db\Orm">
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Db/Orm/HydratorDecoratorFactory.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Db/Orm/HydratorDecoratorFactory.php">
         <class name="Lib\Db\Orm\HydratorDecoratorFactory" namespace="Lib\Db\Orm">
-          <metrics complexity="11" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="22" elements="29" coveredelements="24"/>
+          <metrics complexity="11" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="24" elements="29" coveredelements="27"/>
         </class>
         <line num="11" type="method" name="getShortClassName" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="13" type="stmt" count="3"/>
@@ -126,29 +126,29 @@
         <line num="23" type="stmt" count="2"/>
         <line num="24" type="stmt" count="2"/>
         <line num="27" type="stmt" count="2"/>
-        <line num="30" type="method" name="createHydratorForClass" visibility="public" complexity="4" crap="4.13" count="3"/>
+        <line num="30" type="method" name="createHydratorForClass" visibility="public" complexity="4" crap="4.02" count="3"/>
         <line num="32" type="stmt" count="3"/>
         <line num="33" type="stmt" count="3"/>
         <line num="34" type="stmt" count="3"/>
         <line num="35" type="stmt" count="3"/>
         <line num="37" type="stmt" count="3"/>
-        <line num="38" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="1"/>
         <line num="41" type="stmt" count="3"/>
         <line num="42" type="stmt" count="0"/>
         <line num="45" type="stmt" count="3"/>
         <line num="46" type="stmt" count="3"/>
-        <line num="48" type="method" name="createHydratorFile" visibility="public" complexity="2" crap="2.01" count="1"/>
-        <line num="50" type="stmt" count="1"/>
-        <line num="51" type="stmt" count="1"/>
-        <line num="52" type="stmt" count="0"/>
-        <line num="60" type="stmt" count="1"/>
-        <line num="63" type="stmt" count="1"/>
-        <line num="101" type="stmt" count="1"/>
-        <line num="102" type="stmt" count="1"/>
-        <line num="104" type="stmt" count="1"/>
-        <metrics loc="106" ncloc="106" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="22" elements="29" coveredelements="24"/>
+        <line num="48" type="method" name="createHydratorFile" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="63" type="stmt" count="2"/>
+        <line num="101" type="stmt" count="2"/>
+        <line num="102" type="stmt" count="2"/>
+        <line num="104" type="stmt" count="2"/>
+        <metrics loc="106" ncloc="106" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="24" elements="29" coveredelements="27"/>
       </file>
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Db/Orm/Manager.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Db/Orm/Manager.php">
         <class name="Lib\Db\Orm\Manager" namespace="Lib\Db\Orm">
           <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
         </class>
@@ -160,7 +160,7 @@
       </file>
     </package>
     <package name="Lib\Http">
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Http/ParamCollection.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/ParamCollection.php">
         <class name="Lib\Http\ParamCollection" namespace="Lib\Http">
           <metrics complexity="7" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="5" elements="14" coveredelements="9"/>
         </class>
@@ -180,7 +180,7 @@
         <line num="37" type="stmt" count="0"/>
         <metrics loc="38" ncloc="38" classes="1" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="5" elements="14" coveredelements="9"/>
       </file>
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Http/Request.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Request.php">
         <class name="Lib\Http\Request" namespace="Lib\Http">
           <metrics complexity="5" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="13" elements="18" coveredelements="13"/>
         </class>
@@ -204,7 +204,7 @@
         <line num="49" type="stmt" count="0"/>
         <metrics loc="51" ncloc="46" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="13" elements="18" coveredelements="13"/>
       </file>
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Http/ResponseSender.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/ResponseSender.php">
         <class name="Lib\Http\ResponseSender" namespace="Lib\Http">
           <metrics complexity="7" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="10" elements="19" coveredelements="13"/>
         </class>
@@ -229,7 +229,7 @@
         <line num="47" type="stmt" count="1"/>
         <metrics loc="49" ncloc="49" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="10" elements="19" coveredelements="13"/>
       </file>
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Http/ServerCollection.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/ServerCollection.php">
         <class name="Lib\Http\ServerCollection" namespace="Lib\Http">
           <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="7" elements="9" coveredelements="7"/>
         </class>
@@ -246,7 +246,7 @@
       </file>
     </package>
     <package name="Lib\Routing">
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Routing/RouteCollection.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Routing/RouteCollection.php">
         <class name="Lib\Routing\RouteCollection" namespace="Lib\Routing">
           <metrics complexity="5" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="9" coveredelements="7"/>
         </class>
@@ -261,7 +261,7 @@
         <line num="26" type="stmt" count="2"/>
         <metrics loc="28" ncloc="28" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="9" coveredelements="7"/>
       </file>
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Routing/RouteDefinition.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Routing/RouteDefinition.php">
         <class name="Lib\Routing\RouteDefinition" namespace="Lib\Routing">
           <metrics complexity="14" methods="11" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="15" elements="31" coveredelements="23"/>
         </class>
@@ -298,7 +298,7 @@
         <line num="97" type="stmt" count="0"/>
         <metrics loc="99" ncloc="76" classes="1" methods="11" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="15" elements="31" coveredelements="23"/>
       </file>
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Routing/RouteLoader.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Routing/RouteLoader.php">
         <class name="Lib\Routing\RouteLoader" namespace="Lib\Routing">
           <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="18" coveredelements="18"/>
         </class>
@@ -322,7 +322,7 @@
         <line num="49" type="stmt" count="7"/>
         <metrics loc="51" ncloc="42" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="18" coveredelements="18"/>
       </file>
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Routing/Router.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Routing/Router.php">
         <class name="Lib\Routing\Router" namespace="Lib\Routing">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
         </class>
@@ -335,7 +335,7 @@
         <line num="27" type="stmt" count="2"/>
         <metrics loc="29" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
       </file>
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Routing/UrlMatcher.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Routing/UrlMatcher.php">
         <class name="Lib\Routing\UrlMatcher" namespace="Lib\Routing">
           <metrics complexity="7" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="27" coveredelements="27"/>
         </class>
@@ -370,7 +370,7 @@
       </file>
     </package>
     <package name="Lib\Templating">
-      <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Templating/Templater.php">
+      <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Templating/Templater.php">
         <class name="Lib\Templating\Templater" namespace="Lib\Templating">
           <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="7" coveredelements="4"/>
         </class>
@@ -384,6 +384,6 @@
         <metrics loc="24" ncloc="24" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="7" coveredelements="4"/>
       </file>
     </package>
-    <metrics files="16" loc="774" ncloc="722" classes="16" methods="57" coveredmethods="40" conditionals="0" coveredconditionals="0" statements="214" coveredstatements="183" elements="271" coveredelements="223"/>
+    <metrics files="16" loc="774" ncloc="722" classes="16" methods="57" coveredmethods="41" conditionals="0" coveredconditionals="0" statements="214" coveredstatements="185" elements="271" coveredelements="226"/>
   </project>
 </coverage>

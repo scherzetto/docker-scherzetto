@@ -14,7 +14,7 @@ before_install:
 
 script:
   - composer install
-  - ./vendor/bin/phpstan analyse src tests --level 4
+  - ./vendor/bin/phpstan analyse src tests -lmax -c phpstan.neon
   - ./vendor/bin/phpunit --bootstrap ./vendor/autoload.php ./tests/ --coverage-clover ./docs/coverage/xml --whitelist ./src
   - ./vendor/bin/codacycoverage clover ./docs/coverage/xml
 
