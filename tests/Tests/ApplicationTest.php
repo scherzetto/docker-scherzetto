@@ -39,7 +39,7 @@ class ApplicationTest extends TestCase
 
     public function testRouterIsCalled()
     {
-        $this->app->handleRequest(new Request());
+        $this->app->handleRequest(Request::createFromGlobals());
     }
 
     public function testHandleRequestReturnsResponse()

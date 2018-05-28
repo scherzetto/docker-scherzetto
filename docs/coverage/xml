@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1527518626">
-  <project timestamp="1527518626">
+<coverage generated="1527523173">
+  <project timestamp="1527523173">
     <package name="Lib\Access">
       <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Access/Accessor.php">
         <class name="Lib\Access\Accessor" namespace="Lib\Access">
@@ -182,7 +182,7 @@
       </file>
       <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/Request.php">
         <class name="Lib\Http\Request" namespace="Lib\Http">
-          <metrics complexity="5" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="13" elements="23" coveredelements="13"/>
+          <metrics complexity="5" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="22" elements="26" coveredelements="23"/>
         </class>
         <line num="24" type="method" name="__construct" visibility="public" complexity="4" crap="4.04" count="4"/>
         <line num="26" type="stmt" count="4"/>
@@ -200,14 +200,17 @@
         <line num="42" type="stmt" count="4"/>
         <line num="44" type="stmt" count="4"/>
         <line num="45" type="stmt" count="4"/>
-        <line num="47" type="method" name="createFromGlobals" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="49" type="stmt" count="0"/>
-        <line num="50" type="stmt" count="0"/>
-        <line num="51" type="stmt" count="0"/>
-        <line num="52" type="stmt" count="0"/>
-        <line num="53" type="stmt" count="0"/>
-        <line num="54" type="stmt" count="0"/>
-        <metrics loc="57" ncloc="52" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="13" elements="23" coveredelements="13"/>
+        <line num="47" type="method" name="createFromGlobals" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <metrics loc="61" ncloc="56" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="22" elements="26" coveredelements="23"/>
       </file>
       <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Http/ResponseSender.php">
         <class name="Lib\Http\ResponseSender" namespace="Lib\Http">
@@ -242,10 +245,10 @@
         <line num="11" type="stmt" count="4"/>
         <line num="12" type="stmt" count="4"/>
         <line num="14" type="stmt" count="4"/>
-        <line num="15" type="stmt" count="1"/>
+        <line num="15" type="stmt" count="2"/>
         <line num="16" type="stmt" count="0"/>
-        <line num="17" type="stmt" count="1"/>
-        <line num="18" type="stmt" count="1"/>
+        <line num="17" type="stmt" count="2"/>
+        <line num="18" type="stmt" count="2"/>
         <line num="22" type="stmt" count="4"/>
         <metrics loc="24" ncloc="24" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="7" elements="9" coveredelements="7"/>
       </file>
@@ -389,6 +392,6 @@
         <metrics loc="24" ncloc="24" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="7" coveredelements="4"/>
       </file>
     </package>
-    <metrics files="16" loc="780" ncloc="728" classes="16" methods="57" coveredmethods="40" conditionals="0" coveredconditionals="0" statements="219" coveredstatements="183" elements="276" coveredelements="223"/>
+    <metrics files="16" loc="784" ncloc="732" classes="16" methods="57" coveredmethods="41" conditionals="0" coveredconditionals="0" statements="222" coveredstatements="192" elements="279" coveredelements="233"/>
   </project>
 </coverage>

@@ -46,10 +46,14 @@ class Request extends BaseRequest
 
     public static function createFromGlobals()
     {
+        array_walk($_GET, 'htmlspecialchars');
+        array_walk($_POST, 'htmlspecialchars');
+        array_walk($_COOKIE, 'htmlspecialchars');
+
         return new self(
-            array_walk($_GET, 'htmlspecialchars'),
-            array_walk($_POST, 'htmlspecialchars'),
-            array_walk($_COOKIE, 'htmlspecialchars'),
+            $_GET,
+            $_POST,
+            $_COOKIE,
             $_SERVER,
             $_FILES
         );
