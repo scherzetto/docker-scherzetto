@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1527523173">
-  <project timestamp="1527523173">
+<coverage generated="1527686021">
+  <project timestamp="1527686021">
     <package name="Lib\Access">
       <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Access/Accessor.php">
         <class name="Lib\Access\Accessor" namespace="Lib\Access">
@@ -83,32 +83,32 @@
         <class name="Lib\Db\Dbal\Connection" namespace="Lib\Db\Dbal">
           <metrics complexity="9" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="26" coveredelements="26"/>
         </class>
-        <line num="12" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="14" type="stmt" count="1"/>
-        <line num="15" type="stmt" count="1"/>
-        <line num="16" type="stmt" count="1"/>
-        <line num="17" type="stmt" count="1"/>
-        <line num="18" type="stmt" count="1"/>
-        <line num="19" type="stmt" count="1"/>
-        <line num="20" type="stmt" count="1"/>
-        <line num="21" type="stmt" count="1"/>
-        <line num="23" type="stmt" count="1"/>
-        <line num="26" type="stmt" count="1"/>
-        <line num="29" type="method" name="createParams" visibility="private" complexity="4" crap="4" count="1"/>
-        <line num="32" type="stmt" count="1"/>
-        <line num="35" type="stmt" count="1"/>
-        <line num="36" type="stmt" count="1"/>
-        <line num="37" type="stmt" count="1"/>
-        <line num="38" type="stmt" count="1"/>
-        <line num="40" type="stmt" count="1"/>
-        <line num="43" type="stmt" count="1"/>
-        <line num="44" type="stmt" count="1"/>
-        <line num="47" type="method" name="createDsn" visibility="private" complexity="3" crap="3" count="1"/>
-        <line num="49" type="stmt" count="1"/>
-        <line num="50" type="stmt" count="1"/>
-        <line num="51" type="stmt" count="1"/>
-        <line num="52" type="stmt" count="1"/>
-        <line num="55" type="stmt" count="1"/>
+        <line num="12" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="14" type="stmt" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="16" type="stmt" count="2"/>
+        <line num="17" type="stmt" count="2"/>
+        <line num="18" type="stmt" count="2"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="29" type="method" name="createParams" visibility="private" complexity="4" crap="4" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="47" type="method" name="createDsn" visibility="private" complexity="3" crap="3" count="2"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
         <metrics loc="57" ncloc="57" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="26" coveredelements="26"/>
       </file>
     </package>
@@ -150,13 +150,12 @@
       </file>
       <file name="/home/benjaminz/Dev/perso/MyBlog/src/Lib/Db/Orm/Manager.php">
         <class name="Lib\Db\Orm\Manager" namespace="Lib\Db\Orm">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
         </class>
-        <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="15" type="stmt" count="0"/>
-        <line num="16" type="stmt" count="0"/>
-        <line num="17" type="stmt" count="0"/>
-        <metrics loc="18" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <metrics loc="18" ncloc="15" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
       </file>
     </package>
     <package name="Lib\Http">
@@ -392,6 +391,6 @@
         <metrics loc="24" ncloc="24" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="7" coveredelements="4"/>
       </file>
     </package>
-    <metrics files="16" loc="784" ncloc="732" classes="16" methods="57" coveredmethods="41" conditionals="0" coveredconditionals="0" statements="222" coveredstatements="192" elements="279" coveredelements="233"/>
+    <metrics files="16" loc="784" ncloc="732" classes="16" methods="57" coveredmethods="42" conditionals="0" coveredconditionals="0" statements="221" coveredstatements="194" elements="278" coveredelements="236"/>
   </project>
 </coverage>

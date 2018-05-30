@@ -4,3 +4,6 @@ database:
   dbname: myblog
   username: root
   password: root
+
+orm:
+  entityDir: 'App/Entity'
