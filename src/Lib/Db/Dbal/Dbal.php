@@ -36,12 +36,10 @@ class Dbal
         return $this->conn->prepare($statement, $driverOptions);
     }
 
-    public function query(string $statement, int $fetch = null, $arg3 = null, $arg4 = null)
+    public function query(string $statement, int $fetch = null, $arg3 = null, $ctorarg = null)
     {
-        if ($fetch !== null && $arg3 && $arg4) {
-            return $this->conn->query($statement, $fetch, $arg3, $arg4);
-        } elseif ($fetch !== null && $arg3) {
-            return $this->conn->query($statement, $fetch, $arg3);
+        if ($fetch !== null) {
+            return $this->conn->query($statement, $fetch, $arg3, $ctorarg);
         }
         return $this->conn->query($statement);
     }

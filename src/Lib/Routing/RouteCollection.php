@@ -8,7 +8,11 @@ class RouteCollection
 
     public function add(string $name, RouteDefinition $route)
     {
-        $this->routes[$name] = $route;
+        if (!isset($this->routes['$name'])) {
+            $this->routes[$name] = $route;
+            return true;
+        }
+        throw new \InvalidArgumentException("The route {$name} already exists.");
     }
 
     public function get($name)
