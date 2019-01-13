@@ -1,15 +1,20 @@
 <?php
 
-namespace Lib\Db\Dbal;
+namespace Lib\DB\DBAL;
 
 use \PDO;
 
 /**
  * Class FetchMode
- * @package Lib\Db\Dbal
+ * @package Lib\DB\DBAL
  */
 final class FetchMode
 {
+    /**
+     * @see PDO::ATTR_DEFAULT_FETCH_MODE
+     */
+    public const DEFAULT = PDO::ATTR_DEFAULT_FETCH_MODE;
+
     /**
      * @see PDO::FETCH_ASSOC
      */
@@ -39,6 +44,7 @@ final class FetchMode
      * Allowed fetch modes.
      */
     public const ALLOWED_MODES = [
+        'DEFAULT' => self::DEFAULT,
         'ASSOC' => self::ASSOC,
         'NUMERIC' => self::NUMERIC,
         'MIXED' => self::MIXED,

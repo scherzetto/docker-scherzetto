@@ -1,6 +1,6 @@
 <?php
 
-namespace Lib\Db\Orm;
+namespace Lib\DB\ORM;
 
 use GuzzleHttp\Psr7\UriResolver;
 

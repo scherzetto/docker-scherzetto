@@ -1,13 +1,14 @@
 <?php
 
-namespace Tests\Lib\Db\Orm;
+namespace Tests\Lib\DB\ORM;
 
-use Lib\Db\Orm\HydratorDecoratorFactory;
+use Lib\DB\ORM\HydratorDecoratorFactory;
 use Lib\Routing\RouteDefinition;
 use PHPUnit\Framework\TestCase;
 
 class HydratorDecoratorFactoryTest extends TestCase
 {
+    /** @var HydratorDecoratorFactory */
     private $factory;
 
     public function setUp()

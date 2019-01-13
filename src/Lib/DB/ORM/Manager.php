@@ -1,8 +1,8 @@
 <?php
 
-namespace Lib\Db\Orm;
+namespace Lib\DB\ORM;
 
-use Lib\Db\Dbal\Connection;
+use Lib\DB\DBAL\Connection;
 
 class Manager
 {

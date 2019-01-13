@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Lib\Db\Orm;
+namespace Tests\Lib\DB\ORM;
 
-use Lib\Db\Orm\Manager;
+use Lib\DB\ORM\Manager;
 use PHPUnit\Framework\TestCase;
 
 /**
