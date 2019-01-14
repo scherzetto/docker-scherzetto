@@ -28,7 +28,7 @@ phpstan: vendor
 
 .PHONY: phpunit
 phpunit: vendor
-	./vendor/bin/phpunit --bootstrap ./vendor/autoload.php ./tests/ --coverage-clover ./docs/coverage/xml --whitelist ./src --testdox-xml ./test-results/phpunit/results.xml
+	./vendor/bin/phpunit --bootstrap ./vendor/autoload.php ./tests/ --coverage-clover ./docs/coverage/xml --whitelist ./src --log-junit ./test-results/phpunit/results.xml
 
 .PHONY: install
 install:

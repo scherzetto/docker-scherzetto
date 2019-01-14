@@ -13,8 +13,6 @@ before_install:
   - mysql -e "CREATE DATABASE myblog;"
 
 script:
-  - composer install
-  - ./vendor/bin/phpstan analyse src tests -lmax -c phpstan.neon
-  - ./vendor/bin/phpunit --bootstrap ./vendor/autoload.php ./tests/ --coverage-clover ./docs/coverage/xml --whitelist ./src
+  - make check
   - ./vendor/bin/codacycoverage clover ./docs/coverage/xml
 
