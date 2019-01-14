@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\Http;
 
 class ParamCollection
 {
     protected $parameters;
 
-    public function __construct(array $params = array())
+    public function __construct(array $params = [])
     {
         $this->parameters = $params;
     }

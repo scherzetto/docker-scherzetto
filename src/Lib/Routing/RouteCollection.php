@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\Routing;
 
 class RouteCollection
@@ -10,6 +12,7 @@ class RouteCollection
     {
         if (!isset($this->routes['$name'])) {
             $this->routes[$name] = $route;
+
             return true;
         }
         throw new \InvalidArgumentException("The route {$name} already exists.");
@@ -27,6 +30,6 @@ class RouteCollection
 
     public function count()
     {
-        return count($this->routes);
+        return \count($this->routes);
     }
 }

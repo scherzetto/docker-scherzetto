@@ -1,13 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests;
 
+use GuzzleHttp\Psr7\Response;
 use Lib\Application;
 use Lib\Http\Request;
 use Lib\Routing\Router;
-use GuzzleHttp\Psr7\Response;
-use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\TestCase;
 
 class ApplicationTest extends TestCase
 {

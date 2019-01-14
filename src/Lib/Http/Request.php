@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\Http;
 
 use GuzzleHttp\Psr7\Request as BaseRequest;
@@ -7,7 +9,7 @@ use GuzzleHttp\Psr7\Request as BaseRequest;
 class Request extends BaseRequest
 {
     const METHOD_HEAD = 'HEAD';
-    const METHOD_GET  = 'GET';
+    const METHOD_GET = 'GET';
     const METHOD_POST = 'POST';
 
     protected $query;
@@ -17,17 +19,15 @@ class Request extends BaseRequest
     protected $files;
 
     /**
-     * undocumented function
-     *
-     * @return void
+     * undocumented function.
      */
-    public function __construct($query = array(), $request = array(), $cookie = array(), $server = array(), $files = array())
+    public function __construct($query = [], $request = [], $cookie = [], $server = [], $files = [])
     {
-        $this->query   = new ParamCollection($query);
+        $this->query = new ParamCollection($query);
         $this->request = new ParamCollection($request);
-        $this->cookie  = new ParamCollection($cookie);
-        $this->server  = new ServerCollection($server);
-        $this->files   = new ParamCollection($files);
+        $this->cookie = new ParamCollection($cookie);
+        $this->server = new ServerCollection($server);
+        $this->files = new ParamCollection($files);
 
         $method = $this->server->has('REQUEST_METHOD') ? $this->server->get('REQUEST_METHOD') : 'GET';
 
@@ -39,7 +39,7 @@ class Request extends BaseRequest
             $this->server->set('REQUEST_URI', $requestUri);
         }
 
-        $version = $this->server->has('SERVER_PROTOCOL') ?? substr($this->server->get('SERVER_PROTOCOL'), -3) ?? '1.1';
+        $version = $this->server->has('SERVER_PROTOCOL') ?? mb_substr($this->server->get('SERVER_PROTOCOL'), -3) ?? '1.1';
 
         parent::__construct($method, $requestUri, $this->server->getHeaders(), http_build_query($this->request->all()), $version);
     }

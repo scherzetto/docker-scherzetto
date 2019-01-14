@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\DB\DBAL;
 
 use Lib\DB\DBAL\Connection\ConnectionInterface;
@@ -44,6 +46,7 @@ class Connection
             }
             $params[$key] = $val;
         }
+
         return [$params, $username, $password];
     }
 }

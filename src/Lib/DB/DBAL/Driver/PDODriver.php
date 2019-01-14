@@ -1,10 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: benjamin
- * Date: 13/01/19
- * Time: 23:21
- */
+
+declare(strict_types=1);
 
 namespace Lib\DB\DBAL\Driver;
 
@@ -18,13 +14,14 @@ class PDODriver implements DriverInterface
 
     public function connect(array $params, $username, $password): ConnectionInterface
     {
-        $password = getenv("TEST") ? '' : $password;
+        $password = getenv('TEST') ? '' : $password;
+
         return new PDOConnection(
             $this->createDsn($params),
             $username,
             $password,
             [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             ]
         );
     }
@@ -37,6 +34,7 @@ class PDODriver implements DriverInterface
                 $dsn .= "{$key}={$params[$key]};";
             }
         }
+
         return $dsn;
     }
 }

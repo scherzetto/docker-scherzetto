@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\Routing;
 
 class UrlMatcher
@@ -19,6 +21,7 @@ class UrlMatcher
         if ($match = $this->matchCollection($path)) {
             return $match;
         }
+
         return ['controller' => 'Default', 'action' => 'notFound', 'params' => []];
     }
 
@@ -29,12 +32,13 @@ class UrlMatcher
 
             if (preg_match('#^'.$regex.'$#', $path, $matches)) {
                 $params = array_filter($matches, function ($key) {
-                    return !is_int($key);
+                    return !\is_int($key);
                 }, ARRAY_FILTER_USE_KEY);
+
                 return [
                     'controller' => $route->getDefault('controller'),
-                    'action'     => $route->getDefault('action'),
-                    'params'     => $params
+                    'action' => $route->getDefault('action'),
+                    'params' => $params,
                 ];
             }
         }
@@ -43,11 +47,12 @@ class UrlMatcher
     private function createRegex(RouteDefinition $route): string
     {
         $regex = $route->getPathRegex();
-        $reqs  = $route->getRequirements();
+        $reqs = $route->getRequirements();
         $regex = preg_replace_callback(
             '/{(\w+)}/',
             function ($matches) use ($reqs) {
                 $req = $reqs[$matches[1]] ?? '.+';
+
                 return "(?<{$matches[1]}>{$req})";
             },
             $regex

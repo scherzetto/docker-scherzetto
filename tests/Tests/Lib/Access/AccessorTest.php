@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Lib\Access;
 
 use Lib\Access\Accessor;

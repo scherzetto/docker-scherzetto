@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\Controller;
 
-use Lib\Templating\Templater;
 use GuzzleHttp\Psr7\Response;
+use Lib\Templating\Templater;
 use Psr\Http\Message\ResponseInterface;
 
 class DefaultController
@@ -39,7 +41,7 @@ class DefaultController
     {
         $headers = [
             'Content-Type' => ['text/html; charset=UTF-8'],
-            'Cache-Control' => ['max-age=172800', 'public']
+            'Cache-Control' => ['max-age=172800', 'public'],
         ];
 
         return new Response($statusCode, $headers, $body);

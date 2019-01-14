@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\DB\ORM;
 
 use GuzzleHttp\Psr7\UriResolver;
@@ -11,13 +13,14 @@ class HydratorDecoratorFactory
     public function getShortClassName($fqcn)
     {
         $classArray = explode('\\', $fqcn);
+
         return array_pop($classArray);
     }
 
     public function getHydratorForClass($classOrObject, array $args = [])
     {
-        if (!is_string($classOrObject) && is_object($classOrObject)) {
-            $classOrObject = get_class($classOrObject);
+        if (!\is_string($classOrObject) && \is_object($classOrObject)) {
+            $classOrObject = \get_class($classOrObject);
         }
 
         if (!isset($this->decorators[$classOrObject])) {
@@ -29,17 +32,17 @@ class HydratorDecoratorFactory
 
     public function createHydratorForClass($class, array $args = [])
     {
-        $shortClass    = $this->getShortClassName($class);
+        $shortClass = $this->getShortClassName($class);
         $hydratorClass = $shortClass.'HydratorDecorator';
-        $dir           = UriResolver::removeDotSegments(__DIR__.'/../../../../var/cache/orm/hydrators/');
-        $hydratorFile  = $dir.$hydratorClass.'.php';
+        $dir = UriResolver::removeDotSegments(__DIR__.'/../../../../var/cache/orm/hydrators/');
+        $hydratorFile = $dir.$hydratorClass.'.php';
 
         if (!file_exists($hydratorFile) || !is_readable($hydratorFile)) {
             $this->createHydratorFile($class, $hydratorClass, $hydratorFile);
         }
 
         if (!class_exists($hydratorClass)) {
-            include($hydratorFile);
+            include $hydratorFile;
         }
 
         $this->decorators[$shortClass] = new $hydratorClass(...$args);
@@ -47,7 +50,7 @@ class HydratorDecoratorFactory
 
     public function createHydratorFile($entityClass, $hydratorClass, $hydratorFile)
     {
-        $dir = UriResolver::removeDotSegments(dirname($hydratorFile));
+        $dir = UriResolver::removeDotSegments(\dirname($hydratorFile));
         if (!is_dir($dir)) {
             mkdir($dir, 0777, true);
         }
@@ -101,6 +104,7 @@ EOD;
 $classHeading
 $classBody
 EOD;
+
         return file_put_contents($hydratorFile, $class);
     }
 }

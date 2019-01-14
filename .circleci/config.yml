@@ -36,7 +36,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: composer install -n --prefer-dist
+      - run: make install
 
       - save_cache:
           paths:
@@ -45,7 +45,5 @@ jobs:
 
       # run tests!
       - run:
-          command: ./vendor/bin/phpstan analyse src tests -lmax -c phpstan.neon
-      - run:
-          command: ./vendor/bin/phpunit --bootstrap ./vendor/autoload.php ./tests/ --coverage-clover ./docs/coverage/xml --whitelist ./src
+          command: make check
 

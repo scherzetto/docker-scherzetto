@@ -1,10 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: benjamin
- * Date: 13/01/19
- * Time: 22:49
- */
+
+declare(strict_types=1);
 
 namespace Lib\DB\DBAL\Connection;
 
@@ -30,7 +26,7 @@ class PDOConnection extends PDO implements ConnectionInterface
      */
     public function query($query, $mode = FetchMode::DEFAULT, $arg3 = null, array $ctorargs = [])
     {
-        $argsCount = \count(func_get_args());
+        $argsCount = \count(\func_get_args());
         try {
             if ($argsCount === 4) {
                 return parent::query($query, $mode, $arg3, $ctorargs);
@@ -41,6 +37,7 @@ class PDOConnection extends PDO implements ConnectionInterface
             if ($argsCount === 2) {
                 return parent::query($query, $mode);
             }
+
             return parent::query($query);
         } catch (\PDOException $e) {
             throw new \PDOException($e);

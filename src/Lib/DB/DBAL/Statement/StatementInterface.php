@@ -1,10 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: benjamin
- * Date: 13/01/19
- * Time: 22:40
- */
+
+declare(strict_types=1);
 
 namespace Lib\DB\DBAL\Statement;
 

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Lib\DB\ORM;
 
 use Lib\DB\ORM\Manager;

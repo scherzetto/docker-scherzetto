@@ -1,8 +1,8 @@
 <?php
 
-namespace Lib\Templating;
+declare(strict_types=1);
 
-use Twig_Environment;
+namespace Lib\Templating;
 
 class Templater
 {
@@ -12,7 +12,7 @@ class Templater
     public function __construct()
     {
         $this->twigLoader = new \Twig_Loader_Filesystem(__DIR__.'/../../../public/templates');
-        $this->twigEnv    = new \Twig_Environment($this->twigLoader);
+        $this->twigEnv = new \Twig_Environment($this->twigLoader);
     }
 
     public function render(string $file, array $params = []): string

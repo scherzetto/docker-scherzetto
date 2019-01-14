@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib;
 
 use Lib\Routing\Router;
@@ -19,11 +21,11 @@ class Application
     {
         $attributes = $this->router->route($request);
         $controller = $attributes['controller'].'Controller';
-        $action     = $attributes['action'].'Action';
+        $action = $attributes['action'].'Action';
 
-        $namespace =  '\\App\\Controller\\';
+        $namespace = '\\App\\Controller\\';
         if (!class_exists($namespace.$controller)) {
-            $namespace =  '\\Lib\\Controller\\';
+            $namespace = '\\Lib\\Controller\\';
         }
         $response = ($namespace.$controller)::create()->$action($request, ...$attributes['params']);
 

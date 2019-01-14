@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Lib\Routing;
 
 use Lib\Routing\RouteLoader;
@@ -12,8 +14,8 @@ class UrlMatcherTest extends TestCase
 
     public function setUp()
     {
-        $loader        = new RouteLoader('tests/fixtures/routing.yml');
-        $collection    = $loader->loadRoutes();
+        $loader = new RouteLoader('tests/fixtures/routing.yml');
+        $collection = $loader->loadRoutes();
         $this->matcher = new UrlMatcher($collection);
     }
 
@@ -26,7 +28,7 @@ class UrlMatcherTest extends TestCase
             [
                 'controller' => 'Blog',
                 'action' => 'index',
-                'params' => []
+                'params' => [],
             ],
             $returnBlog
         );
@@ -35,8 +37,8 @@ class UrlMatcherTest extends TestCase
                 'controller' => 'Blog',
                 'action' => 'getPost',
                 'params' => [
-                    'slug' => 'this-is-a-post'
-                ]
+                    'slug' => 'this-is-a-post',
+                ],
             ],
             $returnSlug
         );
@@ -44,13 +46,13 @@ class UrlMatcherTest extends TestCase
 
     public function testMatchReturnsDefaultNotFound()
     {
-        $return= $this->matcher->match('/blogo');
+        $return = $this->matcher->match('/blogo');
 
         $this->assertEquals(
             [
                 'controller' => 'Default',
                 'action' => 'notFound',
-                'params' => []
+                'params' => [],
             ],
             $return
         );
@@ -65,7 +67,7 @@ class UrlMatcherTest extends TestCase
             [
                 'controller' => 'Blog',
                 'action' => 'index',
-                'params' => []
+                'params' => [],
             ],
             $returnBlog
         );
@@ -74,8 +76,8 @@ class UrlMatcherTest extends TestCase
                 'controller' => 'Blog',
                 'action' => 'getPost',
                 'params' => [
-                    'slug' => 'this-is-a-post'
-                ]
+                    'slug' => 'this-is-a-post',
+                ],
             ],
             $returnSlug
         );
@@ -85,6 +87,6 @@ class UrlMatcherTest extends TestCase
     {
         $return = $this->matcher->matchCollection('/blogo');
 
-        $this->assertEquals(null, $return);
+        $this->assertNull($return);
     }
 }

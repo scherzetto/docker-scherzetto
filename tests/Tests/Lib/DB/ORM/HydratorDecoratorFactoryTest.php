@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Lib\DB\ORM;
 
 use Lib\DB\ORM\HydratorDecoratorFactory;
@@ -18,11 +20,11 @@ class HydratorDecoratorFactoryTest extends TestCase
 
     public function testCreateHydratorFileCreatesFile()
     {
-        $file          = __DIR__.'/../../../../../../var/cache/tests/RouteDefinitionHydratorDecorator.php';
+        $file = __DIR__.'/../../../../../../var/cache/tests/RouteDefinitionHydratorDecorator.php';
         $hydratorClass = 'RouteDefinitionHydratorDecorator';
 
         $this->factory->createHydratorFile(RouteDefinition::class, $hydratorClass, $file);
-        include($file);
+        include $file;
         $hydrator = new $hydratorClass('home', '/');
 
         $this->assertTrue(file_exists($file));

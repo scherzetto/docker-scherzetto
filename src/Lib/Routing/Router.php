@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\Routing;
 
 use Psr\Http\Message\RequestInterface;
@@ -17,8 +19,8 @@ class Router
 
     public function __construct(RouteLoader $loader = null, UrlMatcher $matcher = null)
     {
-        $this->loader  = $loader ?? new RouteLoader();
-        $collection    = $this->loader->loadRoutes();
+        $this->loader = $loader ?? new RouteLoader();
+        $collection = $this->loader->loadRoutes();
         $this->matcher = $matcher ?? new UrlMatcher($collection);
     }
 

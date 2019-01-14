@@ -1,12 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\DB\DBAL;
 
-use \PDO;
+use PDO;
 
 /**
- * Class FetchMode
- * @package Lib\DB\DBAL
+ * Class FetchMode.
  */
 final class FetchMode
 {
@@ -49,7 +50,7 @@ final class FetchMode
         'NUMERIC' => self::NUMERIC,
         'MIXED' => self::MIXED,
         'STD_OBJ' => self::STD_OBJ,
-        'CUSTOM_CLASS' => self::CUSTOM_CLASS
+        'CUSTOM_CLASS' => self::CUSTOM_CLASS,
     ];
 
     /**

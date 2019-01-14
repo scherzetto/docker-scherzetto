@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\Routing;
 
 class RouteDefinition
@@ -31,18 +33,16 @@ class RouteDefinition
     private $params;
 
     /**
-     * undocumented function
-     *
-     * @return void
+     * undocumented function.
      */
     public function __construct(string $name, string $pathRegex, array $requirements = [], array $defaults = [], bool $auth = false, array $params = [])
     {
-        $this->name         = $name;
-        $this->pathRegex    = $pathRegex;
+        $this->name = $name;
+        $this->pathRegex = $pathRegex;
         $this->requirements = $requirements;
-        $this->defaults     = array_merge($this->defaults, $defaults);
-        $this->auth         = $auth;
-        $this->params       = $params;
+        $this->defaults = array_merge($this->defaults, $defaults);
+        $this->auth = $auth;
+        $this->params = $params;
     }
 
     public function getName(): string

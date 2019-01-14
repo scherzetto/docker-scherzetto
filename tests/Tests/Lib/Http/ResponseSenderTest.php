@@ -1,11 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Lib\Http;
 
 use Lib\Application;
 use Lib\Http\Request;
 use Lib\Http\ResponseSender;
-use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 
 class ResponseSenderTest extends TestCase

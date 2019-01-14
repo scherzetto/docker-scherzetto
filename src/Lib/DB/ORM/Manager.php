@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\DB\ORM;
 
 use Lib\DB\DBAL\Connection;

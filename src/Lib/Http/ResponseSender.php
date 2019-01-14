@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\Http;
 
 use Psr\Http\Message\ResponseInterface;
@@ -42,7 +44,7 @@ class ResponseSender
 
     public function sendContent()
     {
-        echo htmlspecialchars(strval($this->response->getBody()));
+        echo htmlspecialchars((string) ($this->response->getBody()));
 
         return $this;
     }
