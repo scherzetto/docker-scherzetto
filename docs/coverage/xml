@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1547473163">
-  <project timestamp="1547473163">
+<coverage generated="1547474442">
+  <project timestamp="1547474442">
     <package name="Lib\Access">
       <file name="/home/benjamin/Dev/php/MyBlog/src/Lib/Access/Accessor.php">
         <class name="Lib\Access\Accessor" namespace="Lib\Access">
