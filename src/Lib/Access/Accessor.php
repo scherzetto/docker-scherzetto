@@ -6,13 +6,27 @@ namespace Lib\Access;
 
 class Accessor
 {
-    const MODE_READ = 0;
-    const MODE_WRITE = 1;
+    private const MODE_READ = 0;
+    private const MODE_WRITE = 1;
 
-    const PREF_GET = 'get';
-    const PREF_HAS = 'has';
-    const PREF_IS = 'is';
-    const PREF_SET = 'set';
+    private const PREF_GET = 'get';
+    private const PREF_HAS = 'has';
+    private const PREF_IS = 'is';
+    private const PREF_SET = 'set';
+    private const NO_PREF = '';
+
+    private const PREFIXES = [
+        self::MODE_READ => [
+            self::PREF_GET,
+            self::PREF_HAS,
+            self::PREF_IS,
+            self::NO_PREF,
+        ],
+        self::MODE_WRITE => [
+            self::PREF_SET,
+            self::NO_PREF,
+        ]
+    ];
 
     public function readValue($arrayOrObject, $property)
     {
@@ -37,7 +51,7 @@ class Accessor
         }
     }
 
-    public function camelize($string)
+    public function camelize(string $string): string
     {
         return str_replace('_', '', ucwords($string, '_'));
     }
@@ -46,18 +60,8 @@ class Accessor
     {
         $camelized = $this->camelize($property);
 
-        $methods = [
-            self::MODE_READ => [
-                self::PREF_GET.$camelized,
-                self::PREF_HAS.$camelized,
-                self::PREF_IS.$camelized,
-            ],
-            self::MODE_WRITE => [
-                self::PREF_SET.$camelized,
-            ],
-        ];
-
-        foreach ($methods[$mode] as $method) {
+        foreach (self::PREFIXES[$mode] as $prefix) {
+            $method = $prefix === self::NO_PREF ? lcfirst($camelized) : $prefix.$camelized;
             if (method_exists($target, $method)) {
                 return $method;
             }
