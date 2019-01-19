@@ -22,7 +22,7 @@ class UrlMatcher
             return $match;
         }
 
-        return ['controller' => 'Default', 'action' => 'notFound', 'params' => []];
+        return ['controller' => 'DefaultController', 'action' => 'notFoundAction', 'params' => []];
     }
 
     public function matchCollection($path)

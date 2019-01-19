@@ -50,8 +50,8 @@ class UrlMatcherTest extends TestCase
 
         $this->assertEquals(
             [
-                'controller' => 'Default',
-                'action' => 'notFound',
+                'controller' => 'DefaultController',
+                'action' => 'notFoundAction',
                 'params' => [],
             ],
             $return

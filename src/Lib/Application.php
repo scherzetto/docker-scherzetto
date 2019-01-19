@@ -20,14 +20,13 @@ class Application
     public function handleRequest(RequestInterface $request): ResponseInterface
     {
         $attributes = $this->router->route($request);
-        $controller = $attributes['controller'].'Controller';
-        $action = $attributes['action'].'Action';
+        ['controller' => $controller, 'action' => $action, 'params' => $params] = $attributes;
 
         $namespace = '\\App\\Controller\\';
         if (!class_exists($namespace.$controller)) {
             $namespace = '\\Lib\\Controller\\';
         }
-        $response = ($namespace.$controller)::create()->$action($request, ...$attributes['params']);
+        $response = ($namespace.$controller)::create()->$action($request, ...$params);
 
         return $response;
     }

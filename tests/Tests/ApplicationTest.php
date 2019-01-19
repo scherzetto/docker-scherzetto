@@ -34,7 +34,7 @@ class ApplicationTest extends TestCase
         $this->router
              ->expects($this->once())
              ->method('route')
-             ->willReturn(['controller' => 'Default', 'action' => 'notFound', 'params' => []]);
+             ->willReturn(['controller' => 'DefaultController', 'action' => 'notFoundAction', 'params' => []]);
 
         $this->app = new Application($this->router);
     }
