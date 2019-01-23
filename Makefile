@@ -118,6 +118,7 @@ yarn-install:
 	@printf "\n"
 ifeq (, $(shell command -v yarn 2>/dev/null))
 	curl -o- -L https://yarnpkg.com/install.sh | bash
+	source ~/.bashrc
 endif
 	yarn install --ignore-optional --ignore-script --no-progress
 	@printf "\n"

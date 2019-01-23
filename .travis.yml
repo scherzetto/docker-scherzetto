@@ -4,9 +4,7 @@ php:
   - '7.2'
 
 env:
-  - TEST=1env
   - NODE_RELEASE=8.15
-  - NOTE_RELEASE=10.15
 
 services:
   - mysql
