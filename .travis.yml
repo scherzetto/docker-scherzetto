@@ -4,15 +4,20 @@ php:
   - '7.2'
 
 env:
-  - TEST=1
+  - TEST=1env
+  - NODE_RELEASE=8.x
+  - NOTE_RELEASE=10.x
 
 services:
   - mysql
 
 before_install:
   - mysql -e "CREATE DATABASE myblog;"
+  - sudo rm -rf ~/.nvm - curl -sL "https://deb.nodesource.com/setup_${NODE_RELEASE}" | sudo -E bash -
+  - sudo apt-get install -y nodejs
 
 script:
+  - make install
   - make check
   - ./vendor/bin/codacycoverage clover ./docs/coverage/xml
 
