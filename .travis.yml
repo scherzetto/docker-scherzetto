@@ -5,8 +5,8 @@ php:
 
 env:
   - TEST=1env
-  - NODE_RELEASE=8.15.x
-  - NOTE_RELEASE=10.15.x
+  - NODE_RELEASE=8.15
+  - NOTE_RELEASE=10.15
 
 services:
   - mysql
