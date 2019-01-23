@@ -5,16 +5,16 @@ php:
 
 env:
   - TEST=1env
-  - NODE_RELEASE=8.x
-  - NOTE_RELEASE=10.x
+  - NODE_RELEASE=8.15.x
+  - NOTE_RELEASE=10.15.x
 
 services:
   - mysql
 
 before_install:
   - mysql -e "CREATE DATABASE myblog;"
-  - sudo rm -rf ~/.nvm - curl -sL "https://deb.nodesource.com/setup_${NODE_RELEASE}" | sudo -E bash -
-  - sudo apt-get install -y nodejs
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $NODE_RELEASE
+  - npm install
 
 script:
   - make install

@@ -1,7 +1,8 @@
 build:
   environment:
     php:
-      version: '7.1'
+      version: '7.2'
+    node: 'v8.15.0'
     variables:
       TEST: 1
   dependencies:
