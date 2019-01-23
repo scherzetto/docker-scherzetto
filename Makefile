@@ -67,14 +67,22 @@ phpstan:
 eslint:
 	@printf "\033[90;44m           ESLint          \033[39;0m\n"
 	@printf "\n"
+ifeq (,$(wildcard ./assets))
+	@printf "No files to inspect.\n"
+else
 	./node_modules/.bin/eslint assets -c ./config/tasks/lint/.eslintrc.js --ignore-path ./config/tasks/lint/.eslintignore --fix
+endif
 	@printf "\n"
 
 .PHONY: prettier
 prettier:
 	@printf "\033[90;44m           Prettier          \033[39;0m\n"
 	@printf "\n"
+ifeq (,$(wildcard ./assets))
+	@printf "No files to inspect.\n"
+else
 	./node_modules/.bin/prettier --config ./config/tasks/lint/.prettierrc --ignore-path ./config/tasks/lint/.prettierignore --write ./assets/**/*.js
+endif
 	@printf "\n"
 
 .PHONY: lint

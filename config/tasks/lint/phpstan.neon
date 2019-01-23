@@ -1,0 +1,5 @@
+parameters:
+    fileExtensions:
+        - php
+includes:
+	- ../../../vendor/phpstan/phpstan-phpunit/extension.neon

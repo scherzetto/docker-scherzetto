@@ -1,0 +1,52 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "PHP-React CMS from scratch!",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tiriel/MyBlog.git"
+  },
+  "author": "Benjamin Zaslavsky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tiriel/MyBlog/issues"
+  },
+  "homepage": "https://github.com/Tiriel/MyBlog#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-react": "^7.0.0",
+    "@symfony/webpack-encore": "^0.22.4",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^3.1.2",
+    "babel-runtime": "^6.26.0",
+    "eslint": "^5.12.1",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.2",
+    "react-test-renderer": "^16.7.0",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+  }
+}
