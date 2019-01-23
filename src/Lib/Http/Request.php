@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Lib\Http;
 
 use GuzzleHttp\Psr7\Request as BaseRequest;
+use Psr\Http\Message\RequestInterface;
 
 class Request extends BaseRequest
 {
@@ -18,10 +19,7 @@ class Request extends BaseRequest
     protected $server;
     protected $files;
 
-    /**
-     * undocumented function.
-     */
-    public function __construct($query = [], $request = [], $cookie = [], $server = [], $files = [])
+    public function __construct(array $query = [], array $request = [], array $cookie = [], array $server = [], array $files = [])
     {
         $this->query = new ParamCollection($query);
         $this->request = new ParamCollection($request);
@@ -44,11 +42,13 @@ class Request extends BaseRequest
         parent::__construct($method, $requestUri, $this->server->getHeaders(), http_build_query($this->request->all()), $version);
     }
 
-    public static function createFromGlobals()
+    public static function createFromGlobals(): RequestInterface
     {
-        array_walk($_GET, 'htmlspecialchars');
-        array_walk($_POST, 'htmlspecialchars');
-        array_walk($_COOKIE, 'htmlspecialchars');
+        foreach ([$_GET, $_POST, $_COOKIE] as &$array) {
+            array_walk($array, function ($value) {
+                htmlspecialchars($value);
+            });
+        }
 
         return new self(
             $_GET,

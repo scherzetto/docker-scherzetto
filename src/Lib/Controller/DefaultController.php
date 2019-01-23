@@ -25,11 +25,6 @@ class DefaultController
         return $this->returnResponse('Not Found', 404);
     }
 
-    public static function create()
-    {
-        return new self();
-    }
-
     public function render($template, array $params): ResponseInterface
     {
         $view = $this->templater->render($template, $params);

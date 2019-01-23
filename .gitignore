@@ -3,4 +3,5 @@
 /docs/coverage/
 /test-results/
 /vendor/
+/node_modules/
 /var/

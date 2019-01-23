@@ -44,7 +44,7 @@ class ResponseSender
 
     public function sendContent()
     {
-        echo htmlspecialchars((string) ($this->response->getBody()));
+        echo (string) $this->response->getBody();
 
         return $this;
     }

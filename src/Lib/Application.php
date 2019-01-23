@@ -26,8 +26,8 @@ class Application
         if (!class_exists($namespace.$controller)) {
             $namespace = '\\Lib\\Controller\\';
         }
-        $response = ($namespace.$controller)::create()->$action($request, ...$params);
+        $class = $namespace.$controller;
 
-        return $response;
+        return (new $class())->$action($request, ...$params);
     }
 }

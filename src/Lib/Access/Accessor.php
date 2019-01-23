@@ -25,7 +25,7 @@ class Accessor
         self::MODE_WRITE => [
             self::PREF_SET,
             self::NO_PREF,
-        ]
+        ],
     ];
 
     public function readValue($arrayOrObject, $property)
