@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\Env\Parser;
 
+use Lib\Env\Exception\EnvException;
 use Lib\Env\Exception\FormatException;
 
 class DotenvParser implements EnvParserInterface
@@ -10,6 +13,11 @@ class DotenvParser implements EnvParserInterface
     private const REGEX_QUOTED = '/["\']+(?:.*)["\']+$/A';
     private const REGEX_EMPTY_OR_COMMENT = '(?:\s*+(?:#[^\n]*+)?+)++';
 
+    /**
+     * @param string $data
+     * @return array
+     * @throws EnvException
+     */
     public function parse(string $data): array
     {
         $values = [];
@@ -22,11 +30,12 @@ class DotenvParser implements EnvParserInterface
             try {
                 $this->lexName($name);
                 $this->lexValue($value);
-            } catch (\Exception $e) {
+            } catch (EnvException $e) {
                 throw $e;
             }
             $values[$name] = $value;
         }
+
         return $values;
     }
 
@@ -35,9 +44,15 @@ class DotenvParser implements EnvParserInterface
         if (preg_match('/'.self::REGEX_EMPTY_OR_COMMENT.'/A', $line)) {
             return true;
         }
+
         return false;
     }
 
+    /**
+     * @param string $name
+     * @return string
+     * @throws FormatException
+     */
     private function lexName(string $name): string
     {
         if (!preg_match(self::REGEX_VARNAME, $name, $matches)) {
@@ -46,6 +61,11 @@ class DotenvParser implements EnvParserInterface
         return $matches[2];
     }
 
+    /**
+     * @param string $value
+     * @return string
+     * @throws FormatException
+     */
     private function lexValue(string $value): string
     {
         // strip inline comments on the right hand side

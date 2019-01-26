@@ -3,7 +3,7 @@ database:
   port: 3306
   dbname: myblog
   username: root
-  password: root
+  password: ''
 
 orm:
   entityDir: 'App/Entity'

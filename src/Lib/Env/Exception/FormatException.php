@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\Env\Exception;
 
 class FormatException extends EnvException

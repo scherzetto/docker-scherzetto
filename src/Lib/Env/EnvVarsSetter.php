@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lib\Env;
 
 use Lib\Env\Exception\EnvException;
@@ -34,6 +36,7 @@ final class EnvVarsSetter
      */
     public function loadEnv(string $path, string $envVarName = 'APP_ENV', string $defaultEnv = 'dev', $testEnvs = ['test']): void
     {
+        $file = '';
         if (null === $env = $_SERVER[$envVarName] ?? $_ENV[$envVarName] ?? null) {
             $this->envVars[$envVarName] = $env = $defaultEnv;
         }
@@ -43,23 +46,21 @@ final class EnvVarsSetter
             $this->doLoad($file);
         }
 
-        if (!\in_array($env, $testEnvs, true) &&  file_exists($file = "$path.local")) {
+        if (!\in_array($env, $testEnvs, true) && file_exists($file = "$path.local")) {
             $this->doLoad($file);
         }
-        if (file_exists($file = "$path.$env")) {
-            $this->doLoad($file);
-        }
-        if (file_exists($file = "$path.$env.local")) {
-            $this->doLoad($file);
+        foreach (["$path.$env", "$path.$env.local"] as $file) {
+            if (file_exists($file)) {
+                $this->doLoad($file);
+            }
         }
     }
 
     /**
      * @param string $path
-     * @return string
      * @throws EnvException
      */
-    public function doLoad(string $path): string
+    public function doLoad(string $path)
     {
         if (!is_readable($path) || is_dir($path)) {
             throw new PathException();
