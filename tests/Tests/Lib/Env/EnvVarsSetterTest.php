@@ -37,7 +37,7 @@ class EnvVarsSetterTest extends TestCase
     public function testEnvFileIsNotFoundWithWrongEnv()
     {
         $this->setter->loadEnv($this->envPath);
-        $this->assertFalse(getenv('TEST_FOO'));
+        $this->assertFalse(getenv('TEST_BAR'));
     }
 
     public function testEnvFileIsFoundWithEnv()

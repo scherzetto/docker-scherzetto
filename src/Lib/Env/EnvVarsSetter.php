@@ -10,11 +10,10 @@ use Lib\Env\Parser\EnvParserInterface;
 
 final class EnvVarsSetter
 {
+    public const ENV_DEV = 'dev';
+    public const ENV_TEST = 'test';
+    public const ENV_PROD = 'prod';
     private const DIST_EXT = '.dist';
-
-    private const ENV_DEV = 'dev';
-    private const ENV_TEST = 'test';
-    private const ENV_PROD = 'prod';
 
     /** @var array */
     private $envVars;
