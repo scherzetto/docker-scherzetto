@@ -28,21 +28,21 @@ final class EnvVarsSetter
     }
 
     /**
-     * @param string $path
-     * @param string $envVarName
-     * @param string $defaultEnv
-     * @param array $testEnvs
+     * @param  string       $path
+     * @param  string       $envVarName
+     * @param  string       $defaultEnv
+     * @param  array        $testEnvs
      * @throws EnvException
      */
-    public function loadEnv(string $path, string $envVarName = 'APP_ENV', string $defaultEnv = 'dev', $testEnvs = ['test']): void
+    public function loadEnv(string $path, string $envVarName = 'APP_ENV', string $defaultEnv = self::ENV_DEV, $testEnvs = [self::ENV_TEST]): void
     {
         $file = '';
         if (null === $env = $_SERVER[$envVarName] ?? $_ENV[$envVarName] ?? null) {
             $this->envVars[$envVarName] = $env = $defaultEnv;
         }
-        if (file_exists($path) && !file_exists($file = "$path.dist")) {
+        if (file_exists($path) && !file_exists($file = $path.self::DIST_EXT)) {
             $this->doLoad($path);
-        } else {
+        } elseif (file_exists($file)) {
             $this->doLoad($file);
         }
 
@@ -57,7 +57,7 @@ final class EnvVarsSetter
     }
 
     /**
-     * @param string $path
+     * @param  string       $path
      * @throws EnvException
      */
     public function doLoad(string $path)
@@ -72,11 +72,20 @@ final class EnvVarsSetter
         }
     }
 
+    /**
+     * @param  string       $path
+     * @param  bool         $override
+     * @throws EnvException
+     */
     private function populate(string $path, bool $override = false): void
     {
-        $vars = $this->parser->parse(file_get_contents($path));
+        try {
+            $vars = $this->parser->parse(file_get_contents($path));
+        } catch (EnvException $e) {
+            throw $e;
+        }
         foreach ($vars as $varName => $value) {
-            $httpVar = 0 !== strpos($varName, 'HTTP_');
+            $httpVar = 0 !== mb_strpos($varName, 'HTTP_');
 
             if (!$override && (isset($_ENV[$varName]) || ($httpVar && isset($_SERVER[$varName])))) {
                 continue;

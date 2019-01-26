@@ -32,7 +32,8 @@ class Accessor
     {
         if (\is_array($arrayOrObject)) {
             return $arrayOrObject[$property];
-        } elseif (\is_object($arrayOrObject)) {
+        }
+        if (\is_object($arrayOrObject)) {
             $method = $this->getMethod($arrayOrObject, $property);
 
             return $method ? $arrayOrObject->$method() : false;

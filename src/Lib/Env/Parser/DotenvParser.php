@@ -9,14 +9,14 @@ use Lib\Env\Exception\FormatException;
 
 class DotenvParser implements EnvParserInterface
 {
-    private const REGEX_VARNAME = '(export[ \t]++)?((?i:[A-Z][A-Z0-9_]*+))';
+    private const REGEX_VARNAME = '/(export[ \t]++)?((?i:[A-Z][A-Z0-9_]*+))/A';
     private const REGEX_QUOTED = '/["\']+(?:.*)["\']+$/A';
-    private const REGEX_EMPTY_OR_COMMENT = '(?:\s*+(?:#[^\n]*+)?+)++';
+    private const REGEX_EMPTY_OR_COMMENT = '/(?:\s*+(?:#[^\n]*+)?+)++/A';
 
     /**
-     * @param string $data
-     * @return array
+     * @param  string       $data
      * @throws EnvException
+     * @return array
      */
     public function parse(string $data): array
     {
@@ -26,10 +26,10 @@ class DotenvParser implements EnvParserInterface
             if ($this->emptyLine($line)) {
                 continue;
             }
-            [$name, $value] = explode('=', $line, 2);
             try {
-                $this->lexName($name);
-                $this->lexValue($value);
+                [$name, $value] = explode('=', $line, 2);
+                $name = $this->lexName($name);
+                $value = $this->lexValue($value);
             } catch (EnvException $e) {
                 throw $e;
             }
@@ -41,30 +41,31 @@ class DotenvParser implements EnvParserInterface
 
     private function emptyLine(string $line): bool
     {
-        if (preg_match('/'.self::REGEX_EMPTY_OR_COMMENT.'/A', $line)) {
-            return true;
-        }
+        preg_match(self::REGEX_EMPTY_OR_COMMENT, $line, $matches, 0);
 
-        return false;
+        return $matches[0] !== '' || $line === '';
     }
 
     /**
-     * @param string $name
-     * @return string
+     * @param  string          $name
      * @throws FormatException
+     * @return string
      */
     private function lexName(string $name): string
     {
         if (!preg_match(self::REGEX_VARNAME, $name, $matches)) {
             throw new FormatException('name', $name);
         }
+
         return $matches[2];
     }
 
     /**
      * @param string $value
-     * @return string
+     *
      * @throws FormatException
+     *
+     * @return string
      */
     private function lexValue(string $value): string
     {
@@ -73,15 +74,19 @@ class DotenvParser implements EnvParserInterface
 
         if ($this->isQuoted($value)) {
             // strip quotes
-            $value = substr(substr($value, 0, -1), 1);
+            $value = mb_substr(mb_substr($value, 0, -1), 1);
 
-            $pos = strpos($value, '"');
-            if (0 !== $pos && \strlen($value) - 1 !== $pos) {
-                if ($value{$pos - 1} !== '\\') {
-                    throw new FormatException('value', $value);
-                }
+            $pos = mb_strpos($value, '"');
+            if (
+                false !== $pos &&
+                mb_strlen($value) - 1 !== $pos &&
+                $value[$pos - 1] !== '\\'
+            ) {
+                throw new FormatException('value', $value);
             }
         }
+
+        return $value;
     }
 
     private function isQuoted(string $value): bool
