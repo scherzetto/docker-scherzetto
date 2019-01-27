@@ -9,6 +9,7 @@ use Psr\Http\Message\RequestInterface;
 
 class Request extends BaseRequest
 {
+    // @codeCoverageIgnoreStart
     const METHOD_HEAD = 'HEAD';
     const METHOD_GET = 'GET';
     const METHOD_POST = 'POST';
@@ -59,4 +60,5 @@ class Request extends BaseRequest
             $_FILES
         );
     }
+    // @codeCoverageIgnoreEnd
 }

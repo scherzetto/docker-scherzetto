@@ -6,6 +6,7 @@ namespace Lib\Http;
 
 class ParamCollection
 {
+    // @codeCoverageIgnoreStart
     protected $parameters;
 
     public function __construct(array $params = [])
@@ -37,4 +38,5 @@ class ParamCollection
     {
         $this->parameters[$key] = $value;
     }
+    // @codeCoverageIgnoreEnd
 }

@@ -6,6 +6,7 @@ namespace Lib\Http;
 
 class ServerCollection extends ParamCollection
 {
+    // @codeCoverageIgnoreStart
     public function getHeaders()
     {
         $headers = [];
@@ -21,4 +22,5 @@ class ServerCollection extends ParamCollection
 
         return $headers;
     }
+    // @codeCoverageIgnoreEnd
 }
