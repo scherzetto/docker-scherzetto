@@ -11,6 +11,8 @@ use PDO;
  */
 final class FetchMode
 {
+    // @codeCoverageIgnoreStart
+
     /**
      * @see PDO::ATTR_DEFAULT_FETCH_MODE
      */
@@ -60,4 +62,5 @@ final class FetchMode
     private function __construct()
     {
     }
+    // @codeCoverageIgnoreEnd
 }

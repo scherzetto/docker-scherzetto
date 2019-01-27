@@ -35,15 +35,9 @@ final class EnvVarsSetter
      */
     public function loadEnv(string $path, string $envVarName = 'APP_ENV', string $defaultEnv = self::ENV_DEV, $testEnvs = [self::ENV_TEST]): void
     {
-        $file = '';
-        if (null === $env = $_SERVER[$envVarName] ?? $_ENV[$envVarName] ?? null) {
-            $this->envVars[$envVarName] = $env = $defaultEnv;
-        }
-        if (file_exists($path) && !file_exists($file = $path.self::DIST_EXT)) {
-            $this->doLoad($path);
-        } elseif (file_exists($file)) {
-            $this->doLoad($file);
-        }
+        $env = $this->checkAppEnv($envVarName, $defaultEnv);
+
+        $this->loadDistOrNot($path);
 
         if (!\in_array($env, $testEnvs, true) && file_exists($file = "$path.local")) {
             $this->doLoad($file);
@@ -71,23 +65,38 @@ final class EnvVarsSetter
         }
     }
 
+    private function checkAppEnv(string $envVarName, string $defaultEnv): string
+    {
+        if (null === $env = $_SERVER[$envVarName] ?? $_ENV[$envVarName] ?? null) {
+            $this->envVars[$envVarName] = $env = $defaultEnv;
+        }
+
+        return $env;
+    }
+
+    private function loadDistOrNot(string $path): void
+    {
+        $file = $path.self::DIST_EXT;
+        if (file_exists($path) && !file_exists($file)) {
+            $this->doLoad($path);
+        } elseif (file_exists($file)) {
+            $this->doLoad($file);
+        }
+    }
+
     /**
      * @param  string       $path
-     * @param  bool         $override
      * @throws EnvException
      */
-    private function populate(string $path, bool $override = false): void
+    private function populate(string $path): void
     {
-        try {
-            $vars = $this->parser->parse(file_get_contents($path));
-        } catch (EnvException $e) {
-            throw $e;
-        }
+        $vars = $this->parser->parse(file_get_contents($path));
         $vars['APP_ROOT'] = getcwd();
+
         foreach ($vars as $varName => $value) {
             $httpVar = 0 !== mb_strpos($varName, 'HTTP_');
 
-            if (!$override && (isset($_ENV[$varName]) || ($httpVar && isset($_SERVER[$varName])))) {
+            if (isset($_ENV[$varName]) || ($httpVar && isset($_SERVER[$varName]))) {
                 continue;
             }
 

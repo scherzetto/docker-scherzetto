@@ -9,6 +9,8 @@ use PDO;
 
 class PDOConnection extends PDO implements ConnectionInterface
 {
+    // @codeCoverageIgnoreStart
+
     /**
      * {@inheritdoc}
      */
@@ -103,4 +105,5 @@ class PDOConnection extends PDO implements ConnectionInterface
             throw new \PDOException($e);
         }
     }
+    // @codeCoverageIgnoreEnd
 }
