@@ -44,7 +44,8 @@ class Request extends BaseRequest
 
     public static function createFromGlobals(): RequestInterface
     {
-        foreach ([$_GET, $_POST, $_COOKIE] as &$array) {
+        $datas = [$_GET, $_POST, $_COOKIE];
+        foreach ($datas as &$array) {
             array_walk($array, function ($value) {
                 htmlspecialchars($value);
             });

@@ -21,3 +21,18 @@ build:
 filter:
   excluded_paths:
     - vendor/*
+checks:
+  php: true
+coding_style:
+  php:
+    spaces:
+      before_parentheses:
+        function_declaration: false
+        closure_definition: true
+        function_call: false
+        if: true
+        for: true
+        while: true
+        switch: true
+        catch: true
+        array_initializer: false

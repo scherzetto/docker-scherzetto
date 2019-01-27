@@ -30,7 +30,7 @@ class EnvVarsSetterTest extends TestCase
         $this->parser = $this->getMockBuilder(DotenvParser::class)
             ->setMethods(['parse'])
             ->getMock();
-        $this->parser->method('parse')->willReturn(['TEST_FOO' => 'foo']);
+        $this->parser->/** @scrutinizer ignore-call */method('parse')->willReturn(['TEST_FOO' => 'foo']);
         $this->setter = new EnvVarsSetter($this->parser);
     }
 

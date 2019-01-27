@@ -1,9 +1,11 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Created by PhpStorm.
  * User: benjamin
  * Date: 27/01/19
- * Time: 14:26
+ * Time: 14:26.
  */
 
 namespace Tests\Lib\DB\DBAL\Configurator;
