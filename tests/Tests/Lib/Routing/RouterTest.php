@@ -9,7 +9,7 @@ use Lib\Routing\RouteLoader;
 use Lib\Routing\Router;
 use Lib\Routing\UrlMatcher;
 use PHPUnit\Framework\MockObject\MockObject;
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class RouterTest extends TestCase
 {

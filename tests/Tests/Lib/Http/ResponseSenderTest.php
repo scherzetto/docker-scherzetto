@@ -7,7 +7,7 @@ namespace Tests\Lib\Http;
 use Lib\Application;
 use Lib\Http\Request;
 use Lib\Http\ResponseSender;
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class ResponseSenderTest extends TestCase
 {

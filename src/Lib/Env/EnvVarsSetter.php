@@ -83,6 +83,7 @@ final class EnvVarsSetter
         } catch (EnvException $e) {
             throw $e;
         }
+        $vars['APP_ROOT'] = getcwd();
         foreach ($vars as $varName => $value) {
             $httpVar = 0 !== mb_strpos($varName, 'HTTP_');
 

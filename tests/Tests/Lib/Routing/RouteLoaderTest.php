@@ -6,7 +6,7 @@ namespace Tests\Lib\Routing;
 
 use Lib\Routing\RouteCollection;
 use Lib\Routing\RouteLoader;
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class RouteLoaderTest extends TestCase
 {

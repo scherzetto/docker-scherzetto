@@ -17,7 +17,7 @@ class YamlConfigurator implements ConfiguratorInterface
     public function getParams(): array
     {
         $parser = new Parser();
-        $config = $parser->parseFile(__DIR__.'/../../../../config/config.yml')['database'];
+        $config = $parser->parseFile(getenv('APP_ROOT').'/config/config.yml')['database'];
 
         return $this->createParams($config);
     }

@@ -9,7 +9,6 @@ use Lib\Application;
 use Lib\Http\Request;
 use Lib\Routing\Router;
 use PHPUnit\Framework\MockObject\MockObject;
-use PHPUnit\Framework\TestCase;
 
 class ApplicationTest extends TestCase
 {

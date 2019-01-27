@@ -6,7 +6,7 @@ namespace Tests\Lib\Routing;
 
 use Lib\Routing\RouteLoader;
 use Lib\Routing\UrlMatcher;
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class UrlMatcherTest extends TestCase
 {
