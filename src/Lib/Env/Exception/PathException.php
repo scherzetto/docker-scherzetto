@@ -13,5 +13,6 @@ class PathException extends EnvException
     {
         parent::__construct($message, $code, $previous);
     }
+
     // @codeCoverageIgnoreEnd
 }

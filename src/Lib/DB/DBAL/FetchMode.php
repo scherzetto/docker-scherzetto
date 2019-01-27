@@ -62,5 +62,6 @@ final class FetchMode
     private function __construct()
     {
     }
+
     // @codeCoverageIgnoreEnd
 }

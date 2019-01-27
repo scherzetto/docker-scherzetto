@@ -105,5 +105,6 @@ class PDOConnection extends PDO implements ConnectionInterface
             throw new \PDOException($e);
         }
     }
+
     // @codeCoverageIgnoreEnd
 }

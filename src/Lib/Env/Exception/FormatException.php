@@ -11,5 +11,6 @@ class FormatException extends EnvException
     {
         parent::__construct(sprintf('Wrong character in env var "%s", "%s" given', $property, $actual));
     }
+
     // @codeCoverageIgnoreEnd
 }
