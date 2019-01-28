@@ -38,5 +38,6 @@ class ParamCollection
     {
         $this->parameters[$key] = $value;
     }
+
     // @codeCoverageIgnoreEnd
 }

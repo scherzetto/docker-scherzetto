@@ -60,5 +60,6 @@ class Request extends BaseRequest
             $_FILES
         );
     }
+
     // @codeCoverageIgnoreEnd
 }

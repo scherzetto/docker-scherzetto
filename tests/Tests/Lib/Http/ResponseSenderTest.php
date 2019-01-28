@@ -7,12 +7,18 @@ namespace Tests\Lib\Http;
 use Lib\Application;
 use Lib\Http\Request;
 use Lib\Http\ResponseSender;
+use Psr\Http\Message\ResponseInterface;
 use Tests\TestCase;
 
 class ResponseSenderTest extends TestCase
 {
+    /** @var Application */
     private $application;
+
+    /** @var ResponseInterface */
     private $response;
+
+    /** @var ResponseSender */
     private $sender;
 
     public function setUp()
@@ -24,6 +30,8 @@ class ResponseSenderTest extends TestCase
 
     public function testSendResponse()
     {
+        $this->response->withAddedHeader('content-type', 'application/text');
+
         ob_start();
         $this->sender->sendResponse();
         $echo = ob_get_clean();

@@ -22,5 +22,6 @@ class ServerCollection extends ParamCollection
 
         return $headers;
     }
+
     // @codeCoverageIgnoreEnd
 }
