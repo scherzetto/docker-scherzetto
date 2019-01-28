@@ -33,12 +33,25 @@ class ResponseSenderTest extends TestCase
      */
     public function testSendResponse()
     {
-        $this->response->withAddedHeader('content-type', 'application/text');
-
         ob_start();
         $this->sender->sendResponse();
         $echo = ob_get_clean();
 
         $this->assertEquals('Not Found', $echo);
+    }
+
+    /**
+     * @runInSeparateProcess
+     */
+    public function testSendHeadersAlreadySent()
+    {
+        global $headersSent;
+        $headersSent = true;
+        ob_start();
+        $this->sender->sendResponse();
+        $echo = ob_get_clean();
+
+        $this->assertEquals('Not Found', $echo);
+        $this->assertTrue(headers_sent());
     }
 }
