@@ -27,7 +27,7 @@ class ResponseSender
     {
         $res = $this->response;
 
-        if (headers_sent()) {
+        if (headers_sent($file, $line)) {
             return $this;
         }
 

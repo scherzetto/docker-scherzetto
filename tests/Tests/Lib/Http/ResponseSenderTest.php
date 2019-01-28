@@ -28,6 +28,9 @@ class ResponseSenderTest extends TestCase
         $this->sender = new ResponseSender($this->response);
     }
 
+    /**
+     * @runInSeparateProcess
+     */
     public function testSendResponse()
     {
         $this->response->withAddedHeader('content-type', 'application/text');
@@ -36,7 +39,6 @@ class ResponseSenderTest extends TestCase
         $this->sender->sendResponse();
         $echo = ob_get_clean();
 
-        $this->assertTrue(headers_sent());
         $this->assertEquals('Not Found', $echo);
     }
 }
