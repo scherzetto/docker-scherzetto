@@ -91,7 +91,7 @@ final class EnvVarsSetter
     private function populate(string $path): void
     {
         $vars = $this->parser->parse(file_get_contents($path));
-        $vars['APP_ROOT'] = getcwd();
+        $vars['APP_ROOT'] = realpath(getcwd().'/..');
 
         foreach ($vars as $varName => $value) {
             $httpVar = 0 !== mb_strpos($varName, 'HTTP_');

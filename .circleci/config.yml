@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/php:7.2.14-apache-node-browsers
+      - image: circleci/php-fpm:7.2.14-apache-node-browsers
         environment:
           APP_ENV: test
       - image: circleci/mysql:5.7
@@ -27,7 +27,7 @@ jobs:
       - checkout
       - run: sudo apt update
       - run: sudo apt install mysql-client
-      - run: sudo docker-php-ext-install pdo_mysql
+      - run: sudo docker-php-fpm-ext-install pdo_mysql
 
       # Download and cache dependencies
       - restore_cache:

@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  php:
+    build:
+      context: ./docker/php
+    volumes:
+      - ./:/var/www/html/
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./:/var/www/html/
+      - ./docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - php
+
+  database:
+    build:
+      context: ./docker/database
+    environment:
+      MYSQL_DATABASE: ${APP_DB_NAME}
+      MYSQL_USER: ${APP_DB_USERNAME}
+      MYSQL_PADDWORD: ${APP_DB_PASSWORD}
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1

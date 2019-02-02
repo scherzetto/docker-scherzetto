@@ -6,10 +6,10 @@ use Lib\Env\Parser\DotenvParser;
 use Lib\Http\Request;
 use Lib\Http\ResponseSender;
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 $env = getenv('APP_ENV') ?? EnvVarsSetter::ENV_DEV;
-(new EnvVarsSetter(new DotenvParser()))->loadEnv('.env', 'APP_ENV', $env);
+(new EnvVarsSetter(new DotenvParser()))->loadEnv('../.env', 'APP_ENV', $env);
 
 $app      = new Application();
 $request  = Request::createFromGlobals();

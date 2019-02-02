@@ -35,7 +35,7 @@ class HydratorDecoratorFactory
         $shortClass = $this->getShortClassName($class);
         $hydratorClass = $shortClass.'HydratorDecorator';
         $dir = UriResolver::removeDotSegments(__DIR__.'/../../../../var/cache/orm/hydrators/');
-        $hydratorFile = $dir.$hydratorClass.'.php';
+        $hydratorFile = $dir.$hydratorClass.'.php-fpm';
 
         if (!file_exists($hydratorFile) || !is_readable($hydratorFile)) {
             $this->createHydratorFile($class, $hydratorClass, $hydratorFile);
@@ -56,7 +56,7 @@ class HydratorDecoratorFactory
         }
 
         $classHeading = <<<EOD
-<?php
+<?php-fpm
 
 use Lib\\Access\\Accessor;
 
