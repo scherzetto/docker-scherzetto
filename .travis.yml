@@ -1,4 +1,4 @@
-language: php
+language: php-fpm
 php:
   - '7.1'
   - '7.2'

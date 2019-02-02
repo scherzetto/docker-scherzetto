@@ -20,6 +20,15 @@ class DefaultController
         $this->templater = new Templater();
     }
 
+    public function indexAction()
+    {
+        ob_start();
+        phpinfo();
+        $content = ob_get_clean();
+
+        return $this->returnResponse($content);
+    }
+
     public function notFoundAction()
     {
         return $this->returnResponse('Not Found', 404);
