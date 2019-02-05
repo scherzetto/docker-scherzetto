@@ -1,5 +1,0 @@
-home:
-  path: '/'
-  defaults:
-    controller: 'DefaultController'
-    action: 'indexAction'
