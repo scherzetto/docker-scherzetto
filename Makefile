@@ -127,7 +127,7 @@ ifeq (, $(shell command -v yarn 2>/dev/null))
 	$(EXEC) curl -o- -L https://yarnpkg.com/install.sh | bash
 	$(EXEC) source ~/.bashrc
 endif
-	$(EXEC) yarn install --ignore-optional --ignore-script --no-progress
+	$(EXEC) yarn install --ignore-optional --ignore-script --no-progress --cwd $(PROJECT_DIR)
 	@printf "\n"
 
 .PHONY: install
